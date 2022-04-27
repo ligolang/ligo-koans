@@ -1,0 +1,8 @@
+#import "../lib/k01_native_types.jsligo" "Koan"
+
+let test01 = (Koan.hello() == "Hello");
+let test02 = (Koan.one() == 1);
+let test03 = (Koan.one_tez() == (1 as tez));
+let test04 = (Koan.true_value() == true);
+
+// EOF

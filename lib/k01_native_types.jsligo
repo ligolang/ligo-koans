@@ -1,0 +1,8 @@
+#import "todo.jsligo" "Todo"
+
+export let hello = () : string => Todo.waiting_for("Should return \"Hello\"");
+export let one = () : int => Todo.waiting_for("Should return 1");
+export let one_tez = () : tez => Todo.waiting_for("Should return 1 tez");
+export let true_value = () : bool => Todo.waiting_for("Should return true");
+
+// EOF
