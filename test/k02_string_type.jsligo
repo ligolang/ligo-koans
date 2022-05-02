@@ -1,0 +1,7 @@
+#import "../lib/k02_string_type.jsligo" "Koan"
+
+let test01 = (Koan.concat(["Hello", " World!"]) == "Hello World!");
+let test02 = (Koan.slice("Hello") == "H");
+let test03 = (Koan.length("Hello") == (5 as nat));
+
+// EOF

@@ -1,5 +1,0 @@
-#import "../lib/k02_variables.jsligo" "Koan"
-
-let test01 = (Koan.factorial(4) == (1*2*3*4));
-
-// EOF

@@ -1,0 +1,5 @@
+#import "../lib/k10_imperative.jsligo" "Koan"
+
+let test01 = (Koan.factorial(4 as nat) == (24 as nat));
+
+// EOF

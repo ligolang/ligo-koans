@@ -1,8 +1,30 @@
-#import "todo.jsligo" "Todo"
+#import "todo.jsligo" "K"
 
-export let hello = () : string => Todo.waiting_for("Should return \"Hello\"");
-export let one = () : int => Todo.waiting_for("Should return 1");
-export let one_tez = () : tez => Todo.waiting_for("Should return 1 tez");
-export let true_value = () : bool => Todo.waiting_for("Should return true");
+export let hello = () : string =>
+    "Hello";
+    // K.todo("Should return \"Hello\"");
 
-// EOF
+export let one = () : int => 
+    1;
+    // K.todo("Should return 1");
+
+export let one_nat = () : nat => 
+    1 as nat;
+    // K.todo("Should return 1 nat");
+
+export let one_tez = () : tez => 
+    1 as tez;
+    // K.todo("Should return 1 tez");
+
+export let true_value = () : bool => 
+    true;
+    // K.todo("Should return true");
+
+export let increment_nat = (n:nat) : nat =>
+    n + (1 as nat);
+    // K.todo("Should increment by 1 the parameter");    
+
+/*
+References:
+- https://ligolang.org/docs/language-basics/math-numbers-tez
+*/

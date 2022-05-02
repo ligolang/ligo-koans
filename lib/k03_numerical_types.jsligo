@@ -1,0 +1,58 @@
+#import "todo.jsligo" "K"
+
+/*
+LIGO offers three built-in numerical types:
+- int are integers, such as 10, -6 and 0. But there is only one canonical zero: 0 (so, for instance, -0 and 00 are invalid).
+- nat are natural numbers (integral numbers greater than or equal to zero). They are followed by the annotation as nat such 
+  as 3 as nat, 12 as nat and 0 as nat for the natural zero. The same restriction on zero as integers applies: 0 as nat is the 
+  only way to specify the natural zero.
+- tez are units of measure of Tezos tokens. They can be decimals and are followed by annotation tez such as 3 as tez. You can 
+  also type units of millionth of tez, using the annotation as mutez after a natural literal, such as 10000 as mutez or 0 as mutez.
+*/
+
+/*
+Addition in LIGO is accomplished by means of the + infix operator. Some type constraints apply, for example you cannot add a value 
+of type tez to a value of type nat.
+*/
+
+export let add_int = ([n1,n2]:[int,int]) : int =>
+    n1 + n2;
+    // K.todo("Should add two integers");
+
+export let add_int_and_nat = ([n1,n2]:[int,nat]) : int =>
+    n1 + n2;
+    // K.todo("Should add an integer and a natural");
+
+export let add_nat = ([n1,n2]:[nat,nat]) : nat =>
+    n1 + n2;
+    // K.todo("Should add two naturals");
+
+export let add_tez = ([n1,n2]:[tez,tez]) : tez =>
+    n1 + n2;
+    // K.todo("Should add two tez values");
+
+/*
+Subtractions follow the same principles. 
+Warning: when subtracting two nats, the result is an int
+*/
+
+export let substract_int = ([n1,n2]:[int,int]) : int =>
+    n1 - n2;
+    // K.todo("Should substract two integers");
+
+export let substract_int_and_nat = ([n1,n2]:[int,nat]) : int =>
+    n1 - n2;
+    // K.todo("Should substract and integer and a nat");
+
+export let substract_nat = ([n1,n2]:[nat,nat]) : int =>
+    n1 - n2;
+    // K.todo("Should substract two naturals");
+
+export let substract_tez = ([n1,n2]:[tez,tez]) : tez =>
+    n1 - n2;
+    // K.todo("Should substract two tez values");
+
+/*
+References:
+- https://ligolang.org/docs/language-basics/math-numbers-tez
+*/

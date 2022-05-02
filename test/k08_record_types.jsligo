@@ -1,0 +1,6 @@
+#import "../lib/k08_record_types.jsligo" "Koan"
+
+let test01 = (Koan.account () == ({ balance: 5 as tez, transactions: 3 as nat }) );
+let test02 = (Koan.modify_account (Koan.account ()) == ({ balance: 5 as tez, transactions: 5 as nat }) );
+
+// EOF

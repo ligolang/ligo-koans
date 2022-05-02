@@ -1,0 +1,6 @@
+#import "todo.jsligo" "K"
+
+export let factorial = (n:nat) : nat => 
+    K.todo("Should compute factorial")
+
+// EOF

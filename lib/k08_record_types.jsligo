@@ -1,0 +1,26 @@
+#import "todo.jsligo" "K"
+
+// Type aliasing
+
+type number_of_transactions = nat;
+
+// Record data type
+
+type account_data = {
+  balance: tez,
+  transactions: number_of_transactions
+};
+
+//
+// Note: Record values should be in parenthesis
+//
+
+export let account = () : account_data => 
+  ({ balance: 5 as tez, transactions: 3 as nat });
+  // K.todo("Should return an account data with a balance of 5 tez and 3 transactions");
+
+export let modify_account = (account: account_data) : account_data => 
+  ({ ...account, transactions: 5 as nat });
+  // K.todo("Should return an account data with 5 transactions");
+
+// EOF

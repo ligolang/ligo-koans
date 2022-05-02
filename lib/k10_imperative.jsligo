@@ -1,0 +1,21 @@
+#import "todo.jsligo" "K"
+
+export let factorial = (n:nat) : nat => {
+
+    // variable used for accumulation
+    let value = 1 as nat;
+
+    // /* 
+    let index = 0 as nat;
+    while(index < n) {
+        index = index + (1 as nat);
+        value = value * index;
+    };
+    // */
+
+    // K.todo("Should compute factorial")
+
+    return value;
+}
+
+// EOF
