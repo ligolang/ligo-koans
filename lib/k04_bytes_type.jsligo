@@ -1,0 +1,34 @@
+#import "todo.jsligo" "K"
+
+/*
+    Strings can be concatenated using the + operator.
+*/
+
+export let concat = ([n1,n2]:[bytes,bytes]) : bytes =>
+    Bytes.concat(n1, n2);
+    // K.todo("Should return concat n1 and n2");
+
+/*
+    bytess can be sliced using a built-in function bytes.sub which takes three parameters:
+    - an offset describing the index of first character that will be copied
+    - the length describing the number of characters that will be copied (starting from the given offset)
+    - the bytes being sliced
+*/
+
+export let slice = (n1: bytes) : bytes =>
+    Bytes.sub(1 as nat, 1 as nat, n1);
+    // K.todo("Should return The first byte of n1");
+
+/*
+    The length of a bytes can be found using a built-in function bytes.length
+*/
+
+export let length = (n1: bytes) : nat =>
+    Bytes.length(n1);
+    // K.todo("Should return The length of n1");
+
+/*
+    References: 
+        https://ligolang.org/docs/language-basics/strings-bytes
+        https://ligolang.org/docs/reference/bytes-reference
+*/

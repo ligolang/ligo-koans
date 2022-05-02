@@ -24,7 +24,6 @@ export let increment_nat = (n:nat) : nat =>
     n + (1 as nat);
     // K.todo("Should increment by 1 the parameter");    
 
-/*
-References:
-- https://ligolang.org/docs/language-basics/math-numbers-tez
+/* 
+    Reference: https://ligolang.org/docs/language-basics/math-numbers-tez
 */

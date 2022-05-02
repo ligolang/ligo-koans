@@ -1,4 +1,4 @@
-#import "../lib/k03_numerical_types.jsligo" "Koan"
+#import "../lib/k02_numerical_types.jsligo" "Koan"
 
 let test01 = (Koan.add_int([5, 3]) == 8);
 let test02 = (Koan.add_int_and_nat([5, 3 as nat]) == 8);

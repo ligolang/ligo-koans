@@ -1,6 +1,17 @@
 #import "todo.jsligo" "K"
 
+// /*
+let factorial_terminal = ([acc,max,n]:[nat,nat,nat]) : nat => {
+    if (n > max) { 
+        return acc; 
+    } else { 
+        return factorial_terminal([acc*n,max,n + (1 as nat)]);
+    }
+};
+// */
+
 export let factorial = (n:nat) : nat => 
-    K.todo("Should compute factorial")
+    factorial_terminal([1 as nat,n,1 as nat]);
+    // K.todo("Should compute factorial")
 
 // EOF

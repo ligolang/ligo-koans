@@ -1,4 +1,4 @@
-#import "../lib/k02_string_type.jsligo" "Koan"
+#import "../lib/k03_string_type.jsligo" "Koan"
 
 let test01 = (Koan.concat(["Hello", " World!"]) == "Hello World!");
 let test02 = (Koan.slice("Hello") == "H");
