@@ -4,7 +4,7 @@
     Strings can be concatenated using the + operator.
 */
 
-export let concat = ([n1,n2]:[string,string]) : string =>
+export let concat = (n1:string,n2:string) : string =>
     n1 + n2;
     // K.todo("Should return concat n1 and n2");
 
@@ -16,7 +16,7 @@ export let concat = ([n1,n2]:[string,string]) : string =>
 */
 
 export let slice = (n1: string) : string =>
-    String.sub(1 as nat, 1 as nat, n1);
+    String.sub(0 as nat, 1 as nat, n1);
     // K.todo("Should return The first character of n1");
 
 /*

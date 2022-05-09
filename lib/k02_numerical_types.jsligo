@@ -15,19 +15,19 @@
     of type tez to a value of type nat.
 */
 
-export let add_int = ([n1,n2]:[int,int]) : int =>
+export let add_int = (n1:int,n2:int) : int =>
     n1 + n2;
     // K.todo("Should add two integers");
 
-export let add_int_and_nat = ([n1,n2]:[int,nat]) : int =>
+export let add_int_and_nat = (n1:int,n2:nat) : int =>
     n1 + n2;
     // K.todo("Should add an integer and a natural");
 
-export let add_nat = ([n1,n2]:[nat,nat]) : nat =>
+export let add_nat = (n1:nat,n2:nat) : nat =>
     n1 + n2;
     // K.todo("Should add two naturals");
 
-export let add_tez = ([n1,n2]:[tez,tez]) : tez =>
+export let add_tez = (n1:tez,n2:tez) : tez =>
     n1 + n2;
     // K.todo("Should add two tez values");
 
@@ -36,19 +36,19 @@ export let add_tez = ([n1,n2]:[tez,tez]) : tez =>
     Warning: when subtracting two nats, the result is an int
 */
 
-export let substract_int = ([n1,n2]:[int,int]) : int =>
+export let substract_int = (n1:int,n2:int) : int =>
     n1 - n2;
     // K.todo("Should substract two integers");
 
-export let substract_int_and_nat = ([n1,n2]:[int,nat]) : int =>
+export let substract_int_and_nat = (n1:int,n2:nat) : int =>
     n1 - n2;
     // K.todo("Should substract and integer and a nat");
 
-export let substract_nat = ([n1,n2]:[nat,nat]) : int =>
+export let substract_nat = (n1:nat,n2:nat) : int =>
     n1 - n2;
     // K.todo("Should substract two naturals");
 
-export let substract_tez = ([n1,n2]:[tez,tez]) : tez =>
+export let substract_tez = (n1:tez,n2:tez) : tez =>
     n1 - n2;
     // K.todo("Should substract two tez values");
 

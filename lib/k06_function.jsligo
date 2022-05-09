@@ -1,0 +1,46 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    Functions in JsLIGO are defined using the let or const keyword, like other values.
+    The difference is that parameters are provided after the value name, with its type, 
+    then followed by the return type.
+
+    Here is how you define a basic function that sums two integers:
+
+    const add = (a:int, b:int): int => a + b;
+
+    This syntax is equivalent to 
+
+    const add = ([a, b]: [int, int]): int => a + b;
+*/
+
+/*
+  Write the function which computes the maximum of two integers
+
+  max(1,2) returns 2
+*/
+
+const max = (a:int,b:int): int => {
+  if (a < b) {
+    return b;
+  } else {
+    return a;
+  }
+};
+
+/*
+  Write a function waiting for a string which returns a function
+  waiting for another char and returns the string catenation.
+
+  concat("a")("b") = "ab"
+*/    
+
+export const concat = (a:string) : ((b:string) => string) => {
+    const do_concat = (b:string): string => (a + b);
+    return do_concat;
+};
+
+/*
+  Reference: https://ligolang.org/docs/language-basics/functions
+*/
+

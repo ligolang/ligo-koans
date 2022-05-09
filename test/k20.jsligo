@@ -1,6 +1,7 @@
+#import "common/check.jsligo" "Check"
 #import "../lib/k20_imperative.jsligo" "Koan"
 
-const test01 = (Koan.sum_all(list([4 as nat,3 as nat])) == (7 as nat));
-const test02 = (Koan.factorial(4 as nat) == (24 as nat));
+const test01 = (Check.check(Koan.sum_all(list([4 as nat,3 as nat])) == (7 as nat)));
+const test02 = (Check.check(Koan.factorial(4 as nat) == (24 as nat)));
 
 // EOF

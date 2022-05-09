@@ -1,7 +1,15 @@
 const check = (b:bool) : string => {
     if (b) {
-        return "OK";
+        return "✅";
     } else {
-        return "KO;
+        return "❌";        
+    }
+};
+
+const assert_eq = (b:bool) : string => {
+    if (b) {
+        return "✅";
+    } else {
+        return "❌";        
     }
 };

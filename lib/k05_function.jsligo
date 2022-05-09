@@ -1,3 +1,0 @@
-#import "common/todo.jsligo" "K"
-
-export let test = true;

@@ -1,5 +1,6 @@
+#import "common/check.jsligo" "Check"
 #import "../lib/k21_recursive_function.jsligo" "Koan"
 
-const test01 = (Koan.factorial(4 as nat) == (24 as nat));
+const test01 = (Check.check(Koan.factorial(4 as nat) == (24 as nat)));
 
 // EOF

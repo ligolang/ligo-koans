@@ -1,12 +1,13 @@
+#import "common/check.jsligo" "Check"
 #import "../lib/k02_numerical_types.jsligo" "Koan"
 
-const test01 = (Koan.add_int([5, 3]) == 8);
-const test02 = (Koan.add_int_and_nat([5, 3 as nat]) == 8);
-const test03 = (Koan.add_nat([5 as nat, 3 as nat]) == (8 as nat));
-const test04 = (Koan.add_tez([5 as tez, 3 as tez]) == (8 as tez));
-const test05 = (Koan.substract_int([5, 3]) == 2);
-const test06 = (Koan.substract_int_and_nat([5, 3 as nat]) == 2);
-const test07 = (Koan.substract_nat([5 as nat, 3 as nat]) == 2);
-const test08 = (Koan.substract_tez([5 as tez, 3 as tez]) == (2 as tez));
+const test01 = (Check.check(Koan.add_int(5, 3) == 8));
+const test02 = (Check.check(Koan.add_int_and_nat(5, 3 as nat) == 8));
+const test03 = (Check.check(Koan.add_nat(5 as nat, 3 as nat) == (8 as nat)));
+const test04 = (Check.check(Koan.add_tez(5 as tez, 3 as tez) == (8 as tez)));
+const test05 = (Check.check(Koan.substract_int(5, 3) == 2));
+const test06 = (Check.check(Koan.substract_int_and_nat(5, 3 as nat) == 2));
+const test07 = (Check.check(Koan.substract_nat(5 as nat, 3 as nat) == 2));
+const test08 = (Check.check(Koan.substract_tez(5 as tez, 3 as tez) == (2 as tez)));
 
 // EOF
