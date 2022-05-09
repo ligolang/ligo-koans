@@ -1,7 +1,0 @@
-#import "../lib/k04_bytes_type.jsligo" "Koan"
-
-let test01 = (Koan.concat([0x1234, 0x5678]) == 0x12345678);
-let test02 = (Koan.slice(0x1224) == 0x12);
-let test03 = (Koan.length(0x123456) == (6 as nat));
-
-// EOF

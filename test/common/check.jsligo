@@ -1,0 +1,7 @@
+const check = (b:bool) : string => {
+    if (b) {
+        return "OK";
+    } else {
+        return "KO;
+    }
+};

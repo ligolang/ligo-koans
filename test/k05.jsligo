@@ -1,0 +1,3 @@
+#import "../lib/k05_function.jsligo" "Koan"
+
+let test01 = (Koan.test == true);

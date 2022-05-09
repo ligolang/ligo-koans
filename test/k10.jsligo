@@ -1,0 +1,3 @@
+#import "../lib/k10_map_types.jsligo" "Koan"
+
+const test01 = (Koan.test == true);

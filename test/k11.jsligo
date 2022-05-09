@@ -1,0 +1,3 @@
+#import "../lib/k11_variant_types.jsligo" "Koan"
+
+const test01 = (Koan.test == true);

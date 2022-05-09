@@ -1,0 +1,10 @@
+#import "../lib/k01_native_types.jsligo" "Koan"
+
+const test01 = (Koan.hello() == "Hello");
+const test02 = (Koan.one() == 1);
+const test03 = (Koan.one_nat() == (1 as nat));
+const test04 = (Koan.one_tez() == (1 as tez));
+const test05 = (Koan.true_value() == true);
+const test06 = (Koan.increment_nat(1 as nat) == (2 as nat));
+
+// EOF

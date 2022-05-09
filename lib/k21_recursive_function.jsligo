@@ -1,4 +1,4 @@
-#import "todo.jsligo" "K"
+#import "common/todo.jsligo" "K"
 
 // /*
 let factorial_terminal = ([acc,max,n]:[nat,nat,nat]) : nat => {

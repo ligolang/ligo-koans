@@ -1,0 +1,18 @@
+#import "../lib/k06_conditional.jsligo" "Koan"
+
+const test01 = (assert(Koan.compare_string(["a","a"]) == true));
+const test02 = (assert(Koan.compare_string(["a","b"]) == false));
+
+const test03 = (assert(Koan.boolean_and([true,true]) == true));
+const test04 = (assert(Koan.boolean_and([true,false]) == false));
+const test05 = (assert(Koan.boolean_and([false,true]) == false));
+const test06 = (assert(Koan.boolean_and([false,false]) == false));
+
+const test07 = (assert(Koan.boolean_or([true,true]) == true));
+const test08 = (assert(Koan.boolean_or([true,false]) == true));
+const test09 = (assert(Koan.boolean_or([false,true]) == true));
+const test10 = (assert(Koan.boolean_or([false,false]) == false));
+
+const test11 = (assert(Koan.selection([1,2]) == "i1 < i2"));
+const test12 = (assert(Koan.selection([2,2]) == "i1 = i2"));
+const test13 = (assert(Koan.selection([2,1]) == "i1 > i2"));

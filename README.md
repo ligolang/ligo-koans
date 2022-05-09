@@ -6,11 +6,7 @@ A koans are essentially a simple problem where programmer is asked to complete t
 
 ## Stages
 
-### K01 - Native types
-
-### K02 - Imperative programming
-
-### K03 - Functional programming
+TODO
 
 # License
 

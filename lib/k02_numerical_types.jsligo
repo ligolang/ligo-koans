@@ -1,4 +1,4 @@
-#import "todo.jsligo" "K"
+#import "common/todo.jsligo" "K"
 
 /*
     LIGO offers three built-in numerical types:

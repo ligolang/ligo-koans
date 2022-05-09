@@ -1,4 +1,4 @@
-#import "todo.jsligo" "K"
+#import "common/todo.jsligo" "K"
 
 /*
     JsLIGO loops can iterate through the contents of a collection, that is, a list, a set or a map. 
@@ -15,7 +15,7 @@ export let sum_all = (l:list<nat>) : nat => {
     };
     return result;
 
-    // K.todo("Should compute the sum of all elements")
+    // K.todo("Should compute the sum of all elements using for-loop control structure")
 };
 
 /*
@@ -35,7 +35,7 @@ export let factorial = (n:nat) : nat => {
     };
     //
 
-    // K.todo("Should compute factorial")
+    // K.todo("Should compute factorial using while-loop control structure")
 
     return value;
 }

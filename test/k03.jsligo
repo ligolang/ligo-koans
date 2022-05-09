@@ -1,0 +1,7 @@
+#import "../lib/k03_string_type.jsligo" "Koan"
+
+const test01 = (assert(Koan.concat(["Hello", " World!"]) == "Hello World!"));
+const test02 = (assert(Koan.slice("Hello") == "H"));
+const test03 = (assert(Koan.length("Hello") == (5 as nat)));
+
+// EOF

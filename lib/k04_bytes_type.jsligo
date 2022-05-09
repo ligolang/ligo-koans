@@ -1,4 +1,4 @@
-#import "todo.jsligo" "K"
+#import "common/todo.jsligo" "K"
 
 /*
     Strings can be concatenated using the + operator.

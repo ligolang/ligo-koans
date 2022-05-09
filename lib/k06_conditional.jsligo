@@ -1,0 +1,47 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    The type of a boolean value is bool. Here is how to define a boolean value:
+
+    let a: bool = true;
+    let b: bool = false;
+*/
+
+/* 
+    Comparing values
+*/
+
+const compare_string = ([s1, s2]:[string, string]): bool => {
+    (s1 == s2);
+    // K.todo("Should compare two strings");
+};
+    
+const boolean_and = ([b1, b2]:[bool, bool]): bool => {
+    (b1 && b2);
+    // K.todo("Should return the boolean and of b1, b2 ");
+};
+     
+const boolean_or = ([b1, b2]:[bool, bool]): bool => {
+    (b1 || b2);
+    // K.todo("Should return the boolean or of b1, b2");
+};
+
+/*
+    Conditional selection
+*/
+
+const selection = ([i1, i2]:[int,int]): string => {
+    if (i1 < i2) { 
+        return "i1 < i2"; 
+    } else if (i1 == i2) { 
+        return "i1 = i2"; 
+    } else { 
+        return "i1 > i2"; 
+    };
+
+    // K.todo("Should return a string denoting the comparison i.e. 'i1 < i2' or 'i1 = i2' or 'i1 > i2'");
+};
+
+/*
+    Reference: https://ligolang.org/docs/language-basics/boolean-if-else
+*/

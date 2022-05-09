@@ -1,0 +1,3 @@
+#import "../lib/k09_list_types.jsligo" "Koan"
+
+const test01 = (Koan.test == true);
