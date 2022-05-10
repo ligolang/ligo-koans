@@ -1,0 +1,21 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    Lists are linear collections of elements of the same type. Linear means that, 
+    in order to reach an element in a list, we must visit all the elements before 
+    (sequential access). Elements can be repeated, as only their order in the collection 
+    matters. The first element is called the head, and the sub-list after the head is 
+    called the tail.
+*/
+
+/*
+    Defining lists ...
+*/
+
+export type point = [int,int];
+
+export const no_points = (): list<point> => list([]);
+
+/*
+    Reference: https://ligolang.org/docs/language-basics/sets-lists-tuples#lists
+*/

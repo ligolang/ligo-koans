@@ -1,7 +1,7 @@
 #import "common/todo.jsligo" "K"
 
 /*
-    Strings can be concatenated using the + operator.
+    Bytes can be concatenated using the + operator.
 */
 
 export let concat = (n1:bytes,n2:bytes) : bytes =>
@@ -9,7 +9,7 @@ export let concat = (n1:bytes,n2:bytes) : bytes =>
     // K.todo("Should return concat n1 and n2");
 
 /*
-    bytess can be sliced using a built-in function bytes.sub which takes three parameters:
+    Bytes can be sliced using a built-in function bytes.sub which takes three parameters:
     - an offset describing the index of first character that will be copied
     - the length describing the number of characters that will be copied (starting from the given offset)
     - the bytes being sliced

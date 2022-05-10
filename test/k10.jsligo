@@ -1,4 +1,4 @@
 #import "common/check.jsligo" "Check"
-#import "../lib/k10_map_types.jsligo" "Koan"
+#import "../lib/k10_option.jsligo" "Koan"
 
 const test01 = (Check.check(Koan.test == true));

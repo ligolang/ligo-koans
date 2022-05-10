@@ -27,18 +27,30 @@ const max = (a:int,b:int): int => {
     return a;
   }
 };
+  // K.todo("Should return the function computing the max of two integers");
 
 /*
   Write a function waiting for a string which returns a function
-  waiting for another char and returns the string catenation.
+  waiting for another char and returns the string concatenation.
 
   concat("a")("b") = "ab"
 */    
 
 export const concat = (a:string) : ((b:string) => string) => {
     const do_concat = (b:string): string => (a + b);
+    // K.todo("Should provide a function performing a concatenation");
     return do_concat;
 };
+
+/*
+  JsLIGO offers the capability to receive a functions as a parameter.
+*/
+
+export const handle = (f:((b:string) => string), a:string) : string => {
+    f(a);
+    // K.todo("Should return the application of `f` on `a`");
+};
+
 
 /*
   Reference: https://ligolang.org/docs/language-basics/functions

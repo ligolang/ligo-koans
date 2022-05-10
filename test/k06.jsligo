@@ -3,3 +3,4 @@
 
 let test01 = (Check.check(Koan.max([1,2]) == 2));
 let test02 = (Check.check(Koan.concat("a")("b") == "ab"));
+let test03 = (Check.check(Koan.handle((b:string): string => ("a" + b),"b") == "ab"));

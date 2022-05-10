@@ -1,4 +1,7 @@
 #import "common/check.jsligo" "Check"
-#import "../lib/k09_list_types.jsligo" "Koan"
+#import "../lib/k09_variant_types.jsligo" "Koan"
 
-const test01 = (Check.check(Koan.test == true));
+const test01 = (Check.check(Koan.new_heads() == Heads()));
+const test02 = (Check.check(Koan.new_tails() == Tails()));
+const test03 = (Check.check(Koan.flip_coin(Koan.new_heads()) == Tails()));
+const test04 = (Check.check(Koan.flip_coin(Koan.new_tails()) == Heads()));

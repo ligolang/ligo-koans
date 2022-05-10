@@ -1,0 +1,4 @@
+#import "common/check.jsligo" "Check"
+#import "../lib/k12_map_type.jsligo" "Koan"
+
+const test01 = (Check.check(Koan.test == true));

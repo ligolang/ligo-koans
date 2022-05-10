@@ -18,7 +18,7 @@ help:
 	@echo  '  k21 - Functional style'
 	@echo  ''
 
-all: k01 k02 k03 k04 k05 k06 k07 k08 k09 k10 k11 k20 k21
+all: k01 k02 k03 k04 k05 k06 k07 k08 k09 k10 k11 k12 k20 k21
 
 k01: test/k01.jsligo
 	@echo "[Testing] $^"
@@ -61,6 +61,10 @@ k10: test/k10.jsligo
 	@$(ligo_compiler) run test $^
 
 k11: test/k11.jsligo 
+	@echo "[Testing] $^"
+	@$(ligo_compiler) run test $^
+
+k12: test/k12.jsligo 
 	@echo "[Testing] $^"
 	@$(ligo_compiler) run test $^
 
