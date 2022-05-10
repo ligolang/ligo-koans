@@ -66,8 +66,8 @@ File "test/k01.jsligo", line 5, characters 28-38
 make: *** [k01] Error 1
 ```
 
-And solving eahc exercise step by step you should finally for k01 have 
-the following result:
+Then solving each exercise step by step and finally for k01 you should 
+have the following execution trace.
 
 ```
 jsligo-koans ➤ make k01
