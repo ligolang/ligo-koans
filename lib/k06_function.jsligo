@@ -20,14 +20,8 @@
   max(1,2) returns 2
 */
 
-const max = (a:int,b:int): int => {
-  if (a < b) {
-    return b;
-  } else {
-    return a;
-  }
-};
-  // K.todo("Should return the function computing the max of two integers");
+const max = (a:int,b:int): int =>
+  K.todo("Should return the function computing the max of two integers");
 
 /*
   Write a function waiting for a string which returns a function
@@ -37,9 +31,7 @@ const max = (a:int,b:int): int => {
 */    
 
 export const concat = (a:string) : ((b:string) => string) => {
-    const do_concat = (b:string): string => (a + b);
-    // K.todo("Should provide a function performing a concatenation");
-    return do_concat;
+    K.todo("Should provide a function performing a concatenation");
 };
 
 /*
@@ -47,8 +39,7 @@ export const concat = (a:string) : ((b:string) => string) => {
 */
 
 export const handle = (f:((b:string) => string), a:string) : string => {
-    f(a);
-    // K.todo("Should return the application of `f` on `a`");
+    K.todo("Should return the application of `f` on `a`");
 };
 
 /*
@@ -69,9 +60,7 @@ type curried   = (a:int) => ((b:int) => int);
 */
 
 export const uncurry = (f:curried): uncurried => {
-  const uncurried : uncurried = (a: int,b:int): int => f(a)(b);
-  return uncurried;
-  // K.todo("Should return uncurried version of the parametric function");
+  K.todo("Should return uncurried version of the parametric function");
 };
 
 /* 
@@ -80,9 +69,7 @@ export const uncurry = (f:curried): uncurried => {
 */
 
 export const curry = (f:uncurried): curried => {
-  const curried : curried = (a: int): ((b:int) => int) => (b => f(a,b));
-  return curried;
-    // K.todo("Should return curried version of the parametric function");
+  K.todo("Should return curried version of the parametric function");
 };
 
 /*

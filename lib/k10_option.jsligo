@@ -26,11 +26,7 @@ let div = ([a, b]: [nat, nat]): option<nat> => {
 */
 
 export const map = (f:((n:int) => int), s: option<int>): option<int> => {
-    match(s, {
-        Some : v => Some(f(v)),
-        None : () => None()
-    });
-    // K.todo("Should apply the function on the value in a Some and return an option with the new value, Return None otherwise");
+    K.todo("Should apply the function on the value in a Some and return an option with the new value, Return None otherwise");
 };
 
 /*

@@ -16,10 +16,7 @@
 */
 
 export const assert_not_negative = (i:int): unit => {
-    if (i < 0) {
-        failwith("Negative number"); 
-    };
-    // K.todo("Should fails if the parameter is negative"); 
+    K.todo("Should fails if the parameter is negative"); 
 };
 
 /*

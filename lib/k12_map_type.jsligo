@@ -25,11 +25,7 @@ export const transpose : map<int, string> = Map.literal(list([ [0, "Zero"], [1, 
 */
 
 export const find = (m : map<int,string>, k:int, d:string) : string => {
-    match(Map.find_opt(k,m), {
-        Some: s => s,
-        None: () => d
-    });
-    // K.todo("Should return the value associated to the key; The default value otherwise");
+    K.todo("Should return the value associated to the key; The default value otherwise");
 };
 
 /*
@@ -38,10 +34,7 @@ export const find = (m : map<int,string>, k:int, d:string) : string => {
 */
 
 export const update = (m : map<int,string>, k:int, v:string) : [option<string>,map<int,string>] => {
-    const previous = Map.find_opt(k,m);
-    const updated = Map.add(k,v,m);
-    [previous, updated]
-    // K.todo("Should return the value associated to the key; The default value otherwise");
+    K.todo("Should return the value associated to the key; The default value otherwise");
 };
 
 /*
@@ -59,8 +52,7 @@ export const update = (m : map<int,string>, k:int, v:string) : [option<string>,m
 */
 
 export const map = (f:((k:int,v:string) => string), m: map<int,string>): map<int,string> => {
-    Map.map(f, m);
-    // K.todo("Should apply the function on the value in a Some and return an option with the new value, Return None otherwise");
+    K.todo("Should apply the function on the value in a Some and return an option with the new value, Return None otherwise");
 };
   
 /*

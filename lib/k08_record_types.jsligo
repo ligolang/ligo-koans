@@ -13,8 +13,7 @@ type account_data = {
 };
 
 export let account = () : account_data => 
-  ({ balance: 5 as tez, transactions: 3 as nat });
-  // K.todo("Should return an account data with a balance of 5 tez and 3 transactions");
+  K.todo("Should return an account data with a balance of 5 tez and 3 transactions");
 
 /*
   Given a record value, it is a common design pattern to update only a small number of its fields. 
@@ -27,8 +26,7 @@ export let account = () : account_data =>
 */
 
 export let modify_account = (account: account_data) : account_data => 
-  ({ ...account, transactions: 5 as nat });
-  // K.todo("Should return an account data with 5 transactions");
+  K.todo("Should return an account data with 5 transactions");
 
 /*
   Reference: https://ligolang.org/docs/language-basics/maps-records

@@ -6,16 +6,7 @@
 */
 
 export const factorial = (n:nat) : nat => {
-    const factorial_terminal = (acc:nat,max:nat,n:nat) : nat => {
-        if (n > max) { 
-            return acc; 
-        } else { 
-            return factorial_terminal([acc*n,max,n + (1 as nat)]);
-        }
-    };
-
-    factorial_terminal(1 as nat,n,1 as nat);
-    // K.todo("Should compute factorial using a recursive function");
+    K.todo("Should compute factorial using a recursive function");
 };
 
 /*
@@ -24,13 +15,9 @@ export const factorial = (n:nat) : nat => {
 */
 
 export const sum_all = (l:list<int>) : int => {
-    const sum_all_terminal = (acc:int,l:list<int>) : int => {
-        match(l, list([
-            ([]:list<int>) => acc,
-            ([h,...t]:list<int>) => sum_all_terminal(acc + h,t)
-        ]));
-    };
-
-    sum_all_terminal(0,l);
-    // K.todo("Should sum all elements of the list using a recursive function");
+    K.todo("Should sum all elements of the list using a recursive function");
 };
+
+/*
+    Reference: https://ligolang.org/docs/language-basics/functions#recursive-function
+*/

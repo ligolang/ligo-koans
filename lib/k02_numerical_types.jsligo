@@ -16,20 +16,16 @@
 */
 
 export const add_int = (n1:int,n2:int) : int =>
-    n1 + n2;
-    // K.todo("Should add two integers");
+    K.todo("Should add two integers");
 
 export const add_int_and_nat = (n1:int,n2:nat) : int =>
-    n1 + n2;
-    // K.todo("Should add an integer and a natural");
+    K.todo("Should add an integer and a natural");
 
 export const add_nat = (n1:nat,n2:nat) : nat =>
-    n1 + n2;
-    // K.todo("Should add two naturals");
+    K.todo("Should add two naturals");
 
 export const add_tez = (n1:tez,n2:tez) : tez =>
-    n1 + n2;
-    // K.todo("Should add two tez values");
+    K.todo("Should add two tez values");
 
 /*
     Subtractions follow the same principles. 
@@ -37,20 +33,16 @@ export const add_tez = (n1:tez,n2:tez) : tez =>
 */
 
 export const substract_int = (n1:int,n2:int) : int =>
-    n1 - n2;
-    // K.todo("Should substract two integers");
+    K.todo("Should substract two integers");
 
 export const substract_int_and_nat = (n1:int,n2:nat) : int =>
-    n1 - n2;
-    // K.todo("Should substract and integer and a nat");
+    K.todo("Should substract and integer and a nat");
 
 export const substract_nat = (n1:nat,n2:nat) : int =>
-    n1 - n2;
-    // K.todo("Should substract two naturals");
+    K.todo("Should substract two naturals");
 
 export const substract_tez = (n1:tez,n2:tez) : tez =>
-    n1 - n2;
-    // K.todo("Should substract two tez values");
+    K.todo("Should substract two tez values");
 
 /*
     Reference: https://ligolang.org/docs/language-basics/math-numbers-tez

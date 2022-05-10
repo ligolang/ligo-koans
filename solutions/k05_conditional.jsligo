@@ -2,10 +2,10 @@
 
 /*
     The type of a boolean value is bool. Here is how to define a boolean value:
-
-    const a: bool = true;
-    const b: bool = false;
 */
+
+const a: bool = true;
+const b: bool = false;
 
 /* 
     Comparing values

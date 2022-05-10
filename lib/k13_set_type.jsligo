@@ -44,8 +44,7 @@ let my_set: set<int> = Set.literal(list([3, 2, 2, 1]));
 */
 
 export const add_all = (l:set<int>): int => {
-    Set.fold((e:int,r:int):int => e + r, l, 0);
-    // K.todo("Should return the addition of all element");
+    K.todo("Should return the addition of all element");
 };
 
 /*
@@ -56,6 +55,5 @@ export const add_all = (l:set<int>): int => {
 */  
 
 export const map = (f: (i:int) => int, l:set<int>) : set<int> => {
-    Set.fold((r:set<int>,e:int):set<int> => Set.add(f(e),r), l, Set.empty as set<int>);
-    // K.todo("Should perform the map over a set");
+    K.todo("Should perform the map over a set");
 };

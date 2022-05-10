@@ -23,20 +23,8 @@ export const sum_all = (l:list<nat>) : nat => {
 */    
 
 export const factorial = (n:nat) : nat => {
-
-    // variable used for accumulation
-    let value = 1 as nat;
-
-    let index = 0 as nat;
-    while(index < n) {
-        index = index + (1 as nat);
-        value = value * index;
-    };
-
-    // K.todo("Should compute factorial using while-loop control structure")
-
-    return value;
-}
+    K.todo("Should compute factorial using while-loop control structure")
+};
 
 /*
     Reference: https://ligolang.org/docs/language-basics/loops

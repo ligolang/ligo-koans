@@ -5,8 +5,7 @@
 */
 
 export const concat = (n1:bytes,n2:bytes) : bytes =>
-    Bytes.concat(n1, n2);
-    // K.todo("Should return concat n1 and n2");
+    K.todo("Should return concat n1 and n2");
 
 /*
     Bytes can be sliced using a built-in function bytes.sub which takes three parameters:
@@ -16,16 +15,14 @@ export const concat = (n1:bytes,n2:bytes) : bytes =>
 */
 
 export const slice = (n1: bytes) : bytes =>
-    Bytes.sub(0 as nat, 1 as nat, n1);
-    // K.todo("Should return The first byte of n1");
+    K.todo("Should return The first byte of n1");
 
 /*
     The length of a bytes can be found using a built-in function bytes.length
 */
 
 export const length = (n1: bytes) : nat =>
-    Bytes.length(n1);
-    // K.todo("Should return The length of n1");
+    K.todo("Should return The length of n1");
 
 /*
     References: 

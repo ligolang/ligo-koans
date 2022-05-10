@@ -5,8 +5,7 @@
 */
 
 export const concat = (n1:string,n2:string) : string =>
-    n1 + n2;
-    // K.todo("Should return concat n1 and n2");
+    K.todo("Should return concat n1 and n2");
 
 /*
     Strings can be sliced using a built-in function String.sub which takes three parameters:
@@ -16,16 +15,14 @@ export const concat = (n1:string,n2:string) : string =>
 */
 
 export const slice = (n1: string) : string =>
-    String.sub(0 as nat, 1 as nat, n1);
-    // K.todo("Should return The first character of n1");
+    K.todo("Should return The first character of n1");
 
 /*
     The length of a string can be found using a built-in function String.length
 */
 
 export const length = (n1: string) : nat =>
-    String.length(n1);
-    // K.todo("Should return The length of n1");
+    K.todo("Should return The length of n1");
 
 /*
     References: 

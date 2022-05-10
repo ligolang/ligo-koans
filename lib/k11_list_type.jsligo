@@ -45,11 +45,7 @@ const is_empty = (v : list<int>) : bool => {
 */
 
 export const head = (l:list<int>): option<int> => {
-    match(l, list([
-        ([]: list<int>) => None(),
-        ([h, ...t]: list<int>) => Some(h)
-    ]));
-    // K.todo("Should return the head of the parametric list in a Some; None otherwise");
+    K.todo("Should return the head of the parametric list in a Some; None otherwise");
 };
 
 /*
@@ -67,8 +63,7 @@ export const head = (l:list<int>): option<int> => {
 */  
 
 export const increment = (l:list<int>) : list<int> => {
-    List.map((i:int):int => i + 1, l);
-    // K.todo("Should return a list where all elements have been incremented by 1");
+    K.todo("Should return a list where all elements have been incremented by 1");
 };
 
 /*
@@ -90,8 +85,7 @@ export const increment = (l:list<int>) : list<int> => {
 */
 
 export const add_all = (l:list<int>): int => {
-    List.fold_right((e:int,r:int):int => e + r, l, 0);
-    // K.todo("Should return the addition of all element");
+    K.todo("Should return the addition of all element");
 };
 
 /*
@@ -101,8 +95,7 @@ export const add_all = (l:list<int>): int => {
 */
 
 export const reverse = (l:list<int>): list<int> => {
-    List.fold_left((r:list<int>,e:int):list<int> => list([e,...r]), list([]) as list<int>, l);
-    // K.todo("Should return the reversed list");
+    K.todo("Should return the reversed list");
 };
 
 /*
