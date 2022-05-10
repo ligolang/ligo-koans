@@ -1,12 +1,90 @@
 # LIGO koans
 
-## What's a Koan
-
-A koans are essentially a simple problem where programmer is asked to complete the code. And this is done thanks to unit testing.
-
 ## Stages
 
-TODO
+---
+title: Training Shifumi dapp
+tags: Training
+description: Training Shifumi for decentralized application
+---
+
+# Prerequisites
+
+Please install this software first on your machine or use online alternative : 
+
+- [ ] [VS Code](https://code.visualstudio.com/download) : as text editor
+- [ ] [ligo](https://ligolang.org/docs/intro/installation/) : high level language that's transpile to michelson low level language and provide lot of development support for Tezos
+
+## What's a Koan
+
+A koans are essentially a simple problem where programmer is asked to 
+complete the code. And this is done thanks to unit testing.
+
+## Howto ?
+
+The koans are in files from k01 to k16 in the lib directory.
+Each one can be executed thanks to the `make` command:
+
+```sh
+jsligo-koans ➤ make k01
+[Testing] test/k01.jsligo
+
+Test failed with "Should return \"Hello\""
+Trace:
+File "test/../lib/common/todo.jsligo", line 2, characters 15-32:
+
+File "test/../lib/k01_native_types.jsligo", line 5, characters 4-37 ,
+File "test/k01.jsligo", line 4, characters 28-40
+make: *** [k01] Error 
+```
+
+Open the file `k01_native_types` and fix the code. For instance the previous 
+one can be solved replacing the `K.todo(...)` by the response.
+
+### Before
+
+```javascript
+export const hello = () : string => 
+    K.todo("Should return \"Hello\"");
+```
+
+#### After
+
+```javascript
+export const hello = () : string => 
+    "Hello";
+```
+
+```sh
+jsligo-koans ➤ make k01
+[Testing] test/k01.jsligo
+
+Test failed with "Should return 1"
+Trace:
+File "test/../lib/common/todo.jsligo", line 2, characters 15-32:
+
+File "test/../lib/k01_native_types.jsligo", line 9, characters 4-29 ,
+File "test/k01.jsligo", line 5, characters 28-38
+make: *** [k01] Error 1
+```
+
+And solving eahc exercise step by step you should finally for k01 have 
+the following result:
+
+```
+jsligo-koans ➤ make k01
+[Testing] test/k01.jsligo
+Everything at the top-level was executed.
+- test01 exited with value "✅".
+- test02 exited with value "✅".
+- test03 exited with value "✅".
+- test04 exited with value "✅".
+- test05 exited with value "✅".
+- test06 exited with value "✅".
+```
+
+Then solve `k02`, `k03`, ..., `k15` and finally `k16`. Each Koan covers a
+specific topic of the language.
 
 # License
 

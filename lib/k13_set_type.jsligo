@@ -1,0 +1,61 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    Sets are unordered collections of values of the same type, 
+    like lists are ordered collections. Like the mathematical 
+    sets and lists, sets can be empty and, if not, elements of 
+    sets in LIGO are unique, whereas they can be repeated in a 
+    list.
+*/
+
+/*
+    In JsLIGO, the empty set is denoted by the predefined value Set.empty.
+*/
+
+let my_empty_set: set<int> = Set.empty;
+
+/*
+    In JsLIGO, you can define a non-empty set using the Set.literal function 
+    which takes a list of elements & returns a set.
+*/    
+
+let my_set: set<int> = Set.literal(list([3, 2, 2, 1]));
+
+/*
+    A set can be altered thanks to Set.add, tested using Set.mem.
+
+    Set.mem(3,Set.add(3,my_empty_set)) = true
+*/
+
+/*
+    A folded operation is the most general of iterations. The folded function takes 
+    two arguments: an accumulator and the structure element at hand, with which it 
+    then produces a new accumulator. This enables having a partial result that becomes 
+    complete when the traversal of the data structure is over.
+
+    The predefined fold over sets is called Set.fold, however an additional function,
+     Set.fold_right, has been added.
+*/
+
+/*
+  Write a function waiting for a list of integers and returning the addition of all elements.
+
+  add_all(Set.litera(list([1,2,3]))) = 1 + 2 + 3 // 6
+*/
+
+export const add_all = (l:set<int>): int => {
+    Set.fold((e:int,r:int):int => e + r, l, 0);
+    // K.todo("Should return the addition of all element");
+};
+
+/*
+  We may want to change all the elements of a given list by applying to them a function. 
+  Rewrite the map function of a set.
+
+  map(f,Set.literal(list([1,2]))) = Set.literal(list([f(1),f(2)]))
+*/  
+
+export const map = (f: (i:int) => int, l:set<int>) : set<int> => {
+    Set.fold((r:set<int>,e:int):set<int> => Set.add(f(e),r), l, Set.empty as set<int>);
+    // K.todo("Should perform the map over a set");
+};

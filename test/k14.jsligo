@@ -1,0 +1,29 @@
+#import "common/check.jsligo" "Check"
+#import "../lib/k14_exception.jsligo" "Koan"
+
+const case01_ = (): bool => {
+    const [taddr, _, _] = Test.originate(Koan.main, unit, 0 as tez);
+    const contract = Test.to_contract(taddr);
+
+    match(Test.transfer_to_contract(contract, 1, 1 as mutez), {
+        Success: g => true,
+        Fail: e => false,
+    });    
+};
+
+const case02_ = (): bool => {
+    const [taddr, _, _] = Test.originate(Koan.main, unit, 0 as tez);
+    const contract = Test.to_contract(taddr);
+    
+    match(Test.transfer_to_contract(contract, -1, 1 as mutez), {
+        Success: g => false,
+        Fail: e => match(e, {
+            Rejected: p => true,
+            Balance_too_low: r => false,
+            Other: r => false
+        }),
+    });    
+};
+
+const test01 = Check.check(case01_());
+const test02 = Check.check(case02_());

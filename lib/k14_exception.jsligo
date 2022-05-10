@@ -1,0 +1,34 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    In some cases it is necessary to interrupt the flow of 
+    execution with a failure: this is where the predefined 
+    function failwith comes in.
+
+    This is important when a contract has not the required 
+    context or properties it should abort quickly in order
+    to consume the less gaz as possible.
+*/
+
+/*
+  Write a function throwing an error if the parameter is a
+  negative number; unit otherwise
+*/
+
+export const assert_not_negative = (i:int): unit => {
+    if (i < 0) {
+        failwith("Negative number"); 
+    };
+    // K.todo("Should fails if the parameter is negative"); 
+};
+
+/*
+    Contract entry point for the tests
+*/
+export const main = (p:int, s:unit): [list<operation>, unit] => {
+    [list([]) as list<operation>, assert_not_negative(p)];
+};
+
+/*
+    Reference: https://ligolang.org/docs/language-basics/exceptions
+*/

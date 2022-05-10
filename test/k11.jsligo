@@ -1,4 +1,10 @@
 #import "common/check.jsligo" "Check"
 #import "../lib/k11_list_type.jsligo" "Koan"
 
-const test01 = (Check.check(Koan.no_points() == (list([]) as list<Koan.point>)));
+const test01 = (Check.check(Koan.no_ints() == (list([]) as list<int>)));
+const test02 = (Check.check(Koan.cons(1,Koan.cons(2, Koan.no_ints())) == (list([1,2]) as list<int>)));
+const test03 = (Check.check(Koan.head(Koan.no_ints()) == (None() as option<int>)));
+const test04 = (Check.check(Koan.head(Koan.cons(2, Koan.no_ints())) == Some(2)));
+const test05 = (Check.check(Koan.increment(Koan.cons(1,Koan.cons(2, Koan.no_ints()))) == list([2,3])));
+const test06 = (Check.check(Koan.add_all(Koan.cons(1,Koan.cons(2, Koan.no_ints()))) == 3));
+const test07 = (Check.check(Koan.reverse(Koan.cons(1,Koan.cons(2, Koan.no_ints()))) == list([2,1])));

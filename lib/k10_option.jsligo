@@ -20,9 +20,9 @@ let div = ([a, b]: [nat, nat]): option<nat> => {
 };
 
 /*
-    Given a function which acts on int write the function with an option and
-    a function which perform the paramtric function when it's a some and do
-    nothing when it's a None.
+  Give a function which acts on int, write the function with an option and
+  a function which perform the paramtric function when it's a some and do
+  nothing when it's a None.
 */
 
 export const map = (f:((n:int) => int), s: option<int>): option<int> => {
@@ -30,6 +30,9 @@ export const map = (f:((n:int) => int), s: option<int>): option<int> => {
         Some : v => Some(f(v)),
         None : () => None()
     });
+    // K.todo("Should apply the function on the value in a Some and return an option with the new value, Return None otherwise");
 };
 
-export let test = true;
+/*
+    Reference: https://ligolang.org/docs/language-basics/unit-option-pattern-matching#optional-values
+*/

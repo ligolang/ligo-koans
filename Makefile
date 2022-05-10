@@ -7,18 +7,22 @@ help:
 	@echo  '  k02 - numerical types'
 	@echo  '  k03 - string type'
 	@echo  '  k04 - bytes type'
-	@echo  '  k05 - function type'
-	@echo  '  k06 - conditional type'
-	@echo  '  k07 - tuple type'
+	@echo  '  k05 - conditional type'
+	@echo  '  k06 - function type'
+	@echo  '  k07 - tuple types'
 	@echo  '  k08 - record types'
-	@echo  '  k09 - list type'	
-	@echo  '  k10 - map type'	
-	@echo  '  k10 - variant types'	
-	@echo  '  k20 - Imperative style'
-	@echo  '  k21 - Functional style'
+	@echo  '  k09 - variant types'	
+	@echo  '  k10 - option type'	
+	@echo  '  k11 - list type'	
+	@echo  '  k12 - map type'	
+	@echo  '  k13 - set type'	
+	@echo  '  k14 - exception types'	
+	@echo  '  k15 - Imperative style'
+	@echo  '  k16 - Functional style'
 	@echo  ''
 
-all: k01 k02 k03 k04 k05 k06 k07 k08 k09 k10 k11 k12 k20 k21
+all: k01 k02 k03 k04 k05 k06 k07 k08 \
+	 k09 k10 k11 k12 k13 k14 k15 k16
 
 k01: test/k01.jsligo
 	@echo "[Testing] $^"
@@ -68,10 +72,18 @@ k12: test/k12.jsligo
 	@echo "[Testing] $^"
 	@$(ligo_compiler) run test $^
 
-k20: test/k20.jsligo 
+k13: test/k13.jsligo 
 	@echo "[Testing] $^"
 	@$(ligo_compiler) run test $^
 
-k21: test/k21.jsligo 
+k14: test/k14.jsligo 
+	@echo "[Testing] $^"
+	@$(ligo_compiler) run test $^
+
+k15: test/k15.jsligo 
+	@echo "[Testing] $^"
+	@$(ligo_compiler) run test $^
+
+k16: test/k16.jsligo 
 	@echo "[Testing] $^"
 	@$(ligo_compiler) run test $^

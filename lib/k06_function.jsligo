@@ -51,6 +51,39 @@ export const handle = (f:((b:string) => string), a:string) : string => {
     // K.todo("Should return the application of `f` on `a`");
 };
 
+/*
+    Finally we can write functions which return another function. On typical
+    one is the capability to transform a function waiting for two parameters
+    to a function waiting for a parameter returning another function waiting
+    also for one parameter. Such transformation is called Currying.
+
+    Reference: https://en.wikipedia.org/wiki/Currying
+*/
+
+type uncurried = (a:int, b:int) => int;
+type curried   = (a:int) => ((b:int) => int);
+
+/* 
+  Write the fonction able to do Uncurrying i.e. transform a function from
+  curried type to uncurried type.
+*/
+
+export const uncurry = (f:curried): uncurried => {
+  const uncurried : uncurried = (a: int,b:int): int => f(a)(b);
+  return uncurried;
+  // K.todo("Should return uncurried version of the parametric function");
+};
+
+/* 
+  Write the fonction able to do Currying i.e. transform a function from
+  uncurried to curried.
+*/
+
+export const curry = (f:uncurried): curried => {
+  const curried : curried = (a: int): ((b:int) => int) => (b => f(a,b));
+  return curried;
+    // K.todo("Should return curried version of the parametric function");
+};
 
 /*
   Reference: https://ligolang.org/docs/language-basics/functions

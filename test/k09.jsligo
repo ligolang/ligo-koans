@@ -5,15 +5,18 @@ const test01 = (Check.check(Koan.new_heads() == Heads()));
 const test02 = (Check.check(Koan.new_tails() == Tails()));
 const test03 = (Check.check(Koan.flip_coin(Koan.new_heads()) == Tails()));
 const test04 = (Check.check(Koan.flip_coin(Koan.new_tails()) == Heads()));
-const test05 = (Check.check(Koan.play(
-    Play((u:unit):Koan.coin => Heads()), 
-    { heads: (0 as nat), tails:(0 as nat)}) == 
-    ({ heads: (1 as nat), tails:(0 as nat)})));
-const test06 = (Check.check(Koan.play(
-    Play((u:unit):Koan.coin => Tails()), 
-    { heads: (0 as nat), tails:(0 as nat)}) == 
-    ({ heads: (0 as nat), tails:(1 as nat)})));
-const test07 = (Check.check(Koan.play(
-    Reset(), 
-    { heads: (1 as nat), tails:(1 as nat)}) == 
-    ({ heads: (0 as nat), tails:(0 as nat)})));
+const test05 = (Check.check(
+    Koan.play(Play((u:unit):Koan.coin => Heads()), { heads: (0 as nat), tails:(0 as nat)}) 
+    == 
+    ({ heads: (1 as nat), tails:(0 as nat)})
+));
+const test06 = (Check.check(
+    Koan.play(Play((u:unit):Koan.coin => Tails()), { heads: (0 as nat), tails:(0 as nat)}) 
+    == 
+    ({ heads: (0 as nat), tails:(1 as nat)})
+));
+const test07 = (Check.check(
+    Koan.play(Reset(), { heads: (1 as nat), tails:(1 as nat)}) 
+    == 
+    ({ heads: (0 as nat), tails:(0 as nat)})
+));

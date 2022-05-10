@@ -4,7 +4,7 @@
     Strings can be concatenated using the + operator.
 */
 
-export let concat = (n1:string,n2:string) : string =>
+export const concat = (n1:string,n2:string) : string =>
     n1 + n2;
     // K.todo("Should return concat n1 and n2");
 
@@ -15,7 +15,7 @@ export let concat = (n1:string,n2:string) : string =>
     - the string being sliced
 */
 
-export let slice = (n1: string) : string =>
+export const slice = (n1: string) : string =>
     String.sub(0 as nat, 1 as nat, n1);
     // K.todo("Should return The first character of n1");
 
@@ -23,7 +23,7 @@ export let slice = (n1: string) : string =>
     The length of a string can be found using a built-in function String.length
 */
 
-export let length = (n1: string) : nat =>
+export const length = (n1: string) : nat =>
     String.length(n1);
     // K.todo("Should return The length of n1");
 
