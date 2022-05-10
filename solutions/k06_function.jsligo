@@ -1,0 +1,91 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    Functions in JsLIGO are defined using the let or const keyword, like other values.
+    The difference is that parameters are provided after the value name, with its type, 
+    then followed by the return type.
+
+    Here is how you define a basic function that sums two integers:
+
+    const add = (a:int, b:int): int => a + b;
+
+    This syntax is equivalent to 
+
+    const add = ([a, b]: [int, int]): int => a + b;
+*/
+
+/*
+  Write the function which computes the maximum of two integers
+
+  max(1,2) returns 2
+*/
+
+const max = (a:int,b:int): int => {
+  if (a < b) {
+    return b;
+  } else {
+    return a;
+  }
+};
+  // K.todo("Should return the function computing the max of two integers");
+
+/*
+  Write a function waiting for a string which returns a function
+  waiting for another char and returns the string concatenation.
+
+  concat("a")("b") = "ab"
+*/    
+
+export const concat = (a:string) : ((b:string) => string) => {
+    const do_concat = (b:string): string => (a + b);
+    // K.todo("Should provide a function performing a concatenation");
+    return do_concat;
+};
+
+/*
+  JsLIGO offers the capability to receive a functions as a parameter.
+*/
+
+export const handle = (f:((b:string) => string), a:string) : string => {
+    f(a);
+    // K.todo("Should return the application of `f` on `a`");
+};
+
+/*
+    Finally we can write functions which return another function. On typical
+    one is the capability to transform a function waiting for two parameters
+    to a function waiting for a parameter returning another function waiting
+    also for one parameter. Such transformation is called Currying.
+
+    Reference: https://en.wikipedia.org/wiki/Currying
+*/
+
+type uncurried = (a:int, b:int) => int;
+type curried   = (a:int) => ((b:int) => int);
+
+/* 
+  Write the fonction able to do Uncurrying i.e. transform a function from
+  curried type to uncurried type.
+*/
+
+export const uncurry = (f:curried): uncurried => {
+  const uncurried : uncurried = (a: int,b:int): int => f(a)(b);
+  return uncurried;
+  // K.todo("Should return uncurried version of the parametric function");
+};
+
+/* 
+  Write the fonction able to do Currying i.e. transform a function from
+  uncurried to curried.
+*/
+
+export const curry = (f:uncurried): curried => {
+  const curried : curried = (a: int): ((b:int) => int) => (b => f(a,b));
+  return curried;
+    // K.todo("Should return curried version of the parametric function");
+};
+
+/*
+  Reference: https://ligolang.org/docs/language-basics/functions
+*/
+

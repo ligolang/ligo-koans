@@ -1,0 +1,29 @@
+#import "common/todo.jsligo" "K"
+
+export const hello = () : string => 
+    "Hello";
+    // K.todo("Should return \"Hello\"");
+
+export const one = () : int => 
+    1;
+    // K.todo("Should return 1");
+
+export const one_nat = () : nat => 
+    1 as nat;
+    // K.todo("Should return 1 nat");
+
+export const one_tez = () : tez => 
+    1 as tez;
+    // K.todo("Should return 1 tez");
+
+export const true_value = () : bool => 
+    true;
+    // K.todo("Should return true");
+
+export const increment_nat = (n:nat) : nat =>
+    n + (1 as nat);
+    // K.todo("Should increment by 1 the parameter");    
+
+/* 
+    Reference: https://ligolang.org/docs/language-basics/math-numbers-tez
+*/

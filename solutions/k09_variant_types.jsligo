@@ -1,0 +1,142 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    A variant type is a type that defines a type by cases. For instance we
+    can define a type reflecting what can be played during a shifumi game:
+*/
+
+type play = | ["Paper"] | ["Cisor"] | ["Stone"];
+
+/*
+    Here `Paper`, `Cisor` and `Stone` are called data constructors. Then each
+    data can be created thanks to its corresponding constructor.
+*/
+
+const paper : play = Paper();
+const cisor : play = Cisor();
+const stone : play = Stone();    
+
+/*
+    One important type define as a variant with only one constructor is `unit`.
+
+    ```ligo
+    type unit = | ["Unit"];
+    ```
+
+    This type denotes a set with one and only one value `Unit`.
+*/
+
+/*
+    Define a coin flipping type with `Heads` and `Tails`.
+*/
+
+export type coin = 
+    | ["Heads"] | ["Tails"];
+    // Definition the type replacing unit type
+
+export const new_heads = (): coin => 
+    Heads();
+    // K.todo("Should return a heads data");
+
+export const new_tails = (): coin => 
+    Tails();
+    // K.todo("Should return a tails data");
+
+/*
+    Pattern matching is similar to the switch construct in JavaScript, and can be used 
+    to route the program's control flow based on the value of a variant, record, tuple, 
+    or list.
+
+    A component of a pattern can be discarded by using a wildcard _ instead of a variable name.
+
+    Note: LIGO will warn about unused variables bound in patterns in the same way that function 
+          arguments are warned about. Variable names beginning with _ can be used as a binder to 
+          prevent warnings.
+
+    Back to the shifumi variant type the pattern matching is expressed thanks to a dedicated `match``
+    control structure.
+*/
+
+export const is_paper = (p:play): bool => {
+    match(p, {
+        Paper: () => true,
+        Cisor: () => false,
+        Stone: () => false
+    });
+};
+
+/*
+    In this example we can see how the switch case is performed thanks to the recognition of all 
+    data constructors.
+*/
+
+/*
+    Define a function flipping a coins. Then if it's 
+    a Tails it returns a Heads and vice-versa.
+*/
+
+export const flip_coin = (c:coin): coin => {
+    match(c,{
+        Heads: () => new_tails(),
+        Tails: () => new_heads(),
+    });
+    // K.todo("Should return a flipped coin. Heads should be transformed to Tails and Tails should be transformed to Heads.");
+};    
+
+/*
+    The previous variants are equivalent to the enumerated types found in Java, C++, JavaScript etc. because each data constructor
+    does not hold any value!
+
+    In fact, JsLIGO variant can be more complex and can hold values.
+
+    For instance a point can be expressed thanks to its absissa and ordinate or thanks to its radius and angles.
+*/
+
+type coordinate = { absissa : int, ordinate: int};
+type polar = { radius: int, angle: int};
+
+type point = | ["Coordinate", coordinate] | ["Polar", polar];
+
+/*
+    Then the pattern matching recognize and deconstruct data in order to retrieve intrnale values.
+*/
+
+export const is_coordinate = (p:point): bool => {
+    match(p,{
+        Coordinate: _c => true, // p can be used as usual since it's a record,
+        Polar: _p => false, // p can be used as usual since it's a record,
+    });
+};
+
+/*
+    Back to the `coin` we can elaborate a simple game. For this purpose we define first 
+    the game structure and a functional type for the coin 
+*/
+
+type game = { heads: nat, tails: nat };
+type flip = ((u:unit) => coin);
+
+/* 
+    Define a type variant with Play containing a flip function and a Reset. Then after
+    define a function play which manages heads and tails of a game each time a Play and
+    a Reset is received.
+*/    
+
+export type turn = | ["Play", flip] | ["Reset"];
+
+export const play = (t:turn,g:game): game => {
+    match(t, {
+        Play: f => {
+            match(f(), {
+                Heads: () => ({ ...g, heads: g.heads + (1 as nat) }),
+                Tails: () => ({ ...g, tails: g.tails + (1 as nat) }),
+            });
+        },
+        Reset: () => ({ heads:0 as nat, tails:0 as nat})
+    });
+    // K.todo("Should return game reflecting the turn played.");
+};
+
+/*
+   Reference: https://ligolang.org/docs/language-basics/unit-option-pattern-matching#variant-types
+*/

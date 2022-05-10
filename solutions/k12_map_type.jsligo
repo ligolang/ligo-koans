@@ -1,0 +1,69 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    Maps are a data structure which associate values of the same type to 
+    values of the same type. The former are called key and the latter values. 
+    Together they make up a binding. An additional requirement is that the 
+    type of the keys must be comparable, in the Michelson sense.
+*/
+
+/*
+    Here is how to create an empty map.
+*/
+
+const empty: map<int, string> = Map.empty;
+
+/*
+    And here is how to create a non-empty map value:
+*/
+
+export const transpose : map<int, string> = Map.literal(list([ [0, "Zero"], [1, "One"] ]));
+
+/*
+  Access is done thanks to `Map.find_opt`. Propose a function which tries to find
+  a value using a key and if it does not exist 
+*/
+
+export const find = (m : map<int,string>, k:int, d:string) : string => {
+    match(Map.find_opt(k,m), {
+        Some: s => s,
+        None: () => d
+    });
+    // K.todo("Should return the value associated to the key; The default value otherwise");
+};
+
+/*
+  Modification can done thanks to `Map.update`. Propose a function which updates a value using a key 
+  and it return the new map and the previous value as an option
+*/
+
+export const update = (m : map<int,string>, k:int, v:string) : [option<string>,map<int,string>] => {
+    const previous = Map.find_opt(k,m);
+    const updated = Map.add(k,v,m);
+    [previous, updated]
+    // K.todo("Should return the value associated to the key; The default value otherwise");
+};
+
+/*
+    Folded operations over maps takes two arguments: an accumulator and the structure element 
+    at hand, with which it then produces a new accumulator. This enables having a partial result 
+    that becomes complete when the traversal of the data structure is over.
+
+    The predefined functional iterator implementing the folded operation over maps is called 
+    Map.fold and is used as follows.
+*/
+
+/*
+  Give a function which acts on int, write the function with a map and
+  a function which perform the parametric function.
+*/
+
+export const map = (f:((k:int,v:string) => string), m: map<int,string>): map<int,string> => {
+    Map.map(f, m);
+    // K.todo("Should apply the function on the value in a Some and return an option with the new value, Return None otherwise");
+};
+  
+/*
+    Reference: https://ligolang.org/docs/language-basics/maps-records#maps
+               https://ligolang.org/docs/reference/map-reference
+*/

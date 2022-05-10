@@ -1,0 +1,35 @@
+#import "common/todo.jsligo" "K"
+
+/*
+  Records are one-way data of different types can be packed into a single type. A record is made of a set of fields, 
+  which are made of a field name and a field type.
+
+  Note: Record expressions should be in parenthesis
+*/
+
+type account_data = {
+  balance: tez,
+  transactions: nat
+};
+
+export let account = () : account_data => 
+  ({ balance: 5 as tez, transactions: 3 as nat });
+  // K.todo("Should return an account data with a balance of 5 tez and 3 transactions");
+
+/*
+  Given a record value, it is a common design pattern to update only a small number of its fields. 
+  Instead of copying the fields that are unchanged, LIGO offers a way to only update the fields that are modified.
+
+  One way to understand the update of record values is the functional update. The idea is to have an expression 
+  whose value is the updated record.
+
+  Reference; https://ligolang.org/docs/language-basics/maps-records#functional-updates
+*/
+
+export let modify_account = (account: account_data) : account_data => 
+  ({ ...account, transactions: 5 as nat });
+  // K.todo("Should return an account data with 5 transactions");
+
+/*
+  Reference: https://ligolang.org/docs/language-basics/maps-records
+*/

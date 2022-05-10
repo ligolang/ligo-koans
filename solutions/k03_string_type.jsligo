@@ -1,0 +1,35 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    Strings can be concatenated using the + operator.
+*/
+
+export const concat = (n1:string,n2:string) : string =>
+    n1 + n2;
+    // K.todo("Should return concat n1 and n2");
+
+/*
+    Strings can be sliced using a built-in function String.sub which takes three parameters:
+    - an offset describing the index of first character that will be copied
+    - the length describing the number of characters that will be copied (starting from the given offset)
+    - the string being sliced
+*/
+
+export const slice = (n1: string) : string =>
+    String.sub(0 as nat, 1 as nat, n1);
+    // K.todo("Should return The first character of n1");
+
+/*
+    The length of a string can be found using a built-in function String.length
+*/
+
+export const length = (n1: string) : nat =>
+    String.length(n1);
+    // K.todo("Should return The length of n1");
+
+/*
+    References: 
+        https://ligolang.org/docs/language-basics/strings-bytes
+        https://ligolang.org/docs/reference/string-reference
+
+*/

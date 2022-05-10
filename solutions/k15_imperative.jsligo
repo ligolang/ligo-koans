@@ -1,0 +1,43 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    JsLIGO loops can iterate through the contents of a collection, that is, a list, a set or a map. 
+    This is done with a loop of the form:
+    
+        for (const <element var> of <collection var>) <block>.
+
+*/
+
+export const sum_all = (l:list<nat>) : nat => {
+    let result = 0 as nat;
+    for (const e of l) {
+        result = result + e;
+    };
+    return result;
+
+    // K.todo("Should compute the sum of all elements using for-loop control structure")
+};
+
+/*
+    JsLIGO currently also supports iteration through while loops.
+*/    
+
+export const factorial = (n:nat) : nat => {
+
+    // variable used for accumulation
+    let value = 1 as nat;
+
+    let index = 0 as nat;
+    while(index < n) {
+        index = index + (1 as nat);
+        value = value * index;
+    };
+
+    // K.todo("Should compute factorial using while-loop control structure")
+
+    return value;
+}
+
+/*
+    Reference: https://ligolang.org/docs/language-basics/loops
+*/

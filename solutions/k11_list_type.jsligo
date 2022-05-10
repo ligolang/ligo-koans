@@ -1,0 +1,111 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    Lists are linear collections of elements of the same type. Linear means that, 
+    in order to reach an element in a list, we must visit all the elements before 
+    (sequential access). Elements can be repeated, as only their order in the collection 
+    matters. The first element is called the head, and the sub-list after the head is 
+    called the tail.
+*/
+
+/*
+    Defining lists can be done using literal expressions.
+*/
+
+export const no_ints = (): list<int> => list([]);
+export const single_int = (p:int): list<int> => list([1]);
+
+/*
+    In JsLIGO, the cons operator is infix and noted , .... It is not symmetric: on the left 
+    lies the element to cons, and, on the right, a list on which to cons.
+*/
+
+export const cons = (h:int, t:list<int>): list<int> => {
+    list([ h, ...t ]);
+};
+
+/* 
+    Pattern matching for list is particular and has its own syntax. For instance the predicate checking
+    the emptyness of a given list can be expressed thanks to this dedicated matching operation.
+*/
+
+const is_empty = (v : list<int>) : bool => {
+  match(v, list([
+    ([] : list<int>) => true,
+    ([hd, ...tl] : list<int>) => false
+  ]));
+};
+
+/*
+  Given a list of int write the function which returns the first element. For this purpose we use the
+  option type for the result.
+
+  head(list([1,2])) = Some(1)
+  head(list([]))    = None
+*/
+
+export const head = (l:list<int>): option<int> => {
+    match(l, list([
+        ([]: list<int>) => None(),
+        ([h, ...t]: list<int>) => Some(h)
+    ]));
+    // K.todo("Should return the head of the parametric list in a Some; None otherwise");
+};
+
+/*
+    We may want to change all the elements of a given list by applying to them a function. 
+    This is called a map operation, not to be confused with the map data structure. The 
+    predefined functional iterator implementing the mapped operation over lists is called 
+    List.map and is used as follows.
+*/
+
+/*
+  Write a function taking a list of integer and return a list where all elements have been
+  added to one.
+
+  increment(list([1,2])) = list([2,3])
+*/  
+
+export const increment = (l:list<int>) : list<int> => {
+    List.map((i:int):int => i + 1, l);
+    // K.todo("Should return a list where all elements have been incremented by 1");
+};
+
+/*
+    Folded operation over Lists is the most general of iterations. The folded function takes 
+    two arguments: an accumulator and the structure element at hand, with which it then produces 
+    a new accumulator. This enables having a partial result that becomes complete when the 
+    traversal of the data structure is over. Folding can be done in two ways, labelled with 
+    the directions left and right.
+
+    Take for example a function f, a list [1; 2; 3], and an accumulator that's just an 
+    empty list. A rough approximation of the result of a left fold would look like 
+    f(f(f([], 1), 2), 3), while a right fold would instead look like f(1, f(2, f(3, []))).
+*/
+
+/*
+  Write a function waiting for a list of integers and returning the addition of all elements.
+
+  add_all(list([1,2,3])) = 1 + 2 + 3 // 6
+*/
+
+export const add_all = (l:list<int>): int => {
+    List.fold_right((e:int,r:int):int => e + r, l, 0);
+    // K.todo("Should return the addition of all element");
+};
+
+/*
+  Write the fonction reverse for integer lists.
+
+  reverse(list([1,2,3])) = list([3,2,1])
+*/
+
+export const reverse = (l:list<int>): list<int> => {
+    List.fold_left((r:list<int>,e:int):list<int> => list([e,...r]), list([]) as list<int>, l);
+    // K.todo("Should return the reversed list");
+};
+
+/*
+    References: https://ligolang.org/docs/language-basics/sets-lists-tuples#lists
+                https://ligolang.org/docs/reference/list-reference
+*/
