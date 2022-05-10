@@ -65,7 +65,7 @@ type curried   = (a:int) => ((b:int) => int);
 
 /* 
   Write the fonction able to do Uncurrying i.e. transform a function from
-  curried type to uncurried type.
+  curried form to uncurried form.
 */
 
 export const uncurry = (f:curried): uncurried => {
