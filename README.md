@@ -1,12 +1,10 @@
-# LIGO koans
-
-## Stages
-
 ---
-title: Training Shifumi dapp
+title: JsLIGO Koans
 tags: Training
-description: Training Shifumi for decentralized application
+description: Set of koans dedicated to JsLIGO syntax
 ---
+
+# LIGO koans
 
 # Prerequisites
 
@@ -15,7 +13,7 @@ Please install this software first on your machine or use online alternative :
 - [ ] [VS Code](https://code.visualstudio.com/download) : as text editor
 - [ ] [ligo](https://ligolang.org/docs/intro/installation/) : high level language that's transpile to michelson low level language and provide lot of development support for Tezos
 
-## What's a Koan
+# What's a Koan
 
 A koans are essentially a simple problem where programmer is asked to 
 complete the code. And this is done thanks to unit testing.
