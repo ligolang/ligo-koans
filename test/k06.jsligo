@@ -4,3 +4,5 @@
 let test01 = (Check.check(Koan.max([1,2]) == 2));
 let test02 = (Check.check(Koan.concat("a")("b") == "ab"));
 let test03 = (Check.check(Koan.handle((b:string): string => ("a" + b),"b") == "ab"));
+let test04 = (Check.check(Koan.curry((a:int, b:int): int => a + b)(1)(2) == 3));
+let test05 = (Check.check(Koan.uncurry(Koan.curry((a:int, b:int): int => a + b))([1,2]) == 3));
