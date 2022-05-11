@@ -28,10 +28,10 @@ export const is_success : <T>((t:result<T>)=>bool) = t => {
     Finally the map function dedicated to the result data type can be easily define.
 */
 
-export const map : <A,B>((f:(a:A)=>B, r:result<A>) => result<B>) = p => {
-  match(p[1], {
+export const map : <A,B>((f:(a:A)=>B, r:result<A>) => result<B>) = <A,B>(f:(a:A)=>B, r:result<A>) => {
+  match(r, {
     Failure: m => Failure(m),
-    Success: a => Success(p[0](a))
+    Success: a => Success(f(a))
   });
 };
 
