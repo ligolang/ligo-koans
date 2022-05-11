@@ -1,0 +1,40 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    In JsLIGO data structures like list, map, set, option etc. are called parametric
+    types.
+
+    Its also possible to define parametric types. For instances we can specify a 
+    type reflecting a result which can be a success or a failure.
+*/
+
+type result<t> = | ["Success", t] | ["Failure", string];
+
+/*
+    Then after polymorphic functions can be designed in order to manipulate such data
+    type. For this purpose the function type and the function expressions are separated.
+    
+    For instance, is_success can be expressed as follow.
+*/
+
+export const is_success : <T>((t:result<T>)=>bool) = t => {
+    match(t, {
+      Failure: r => false,
+      Success: r => true
+    });
+};
+
+/*
+    Finally the map function dedicated to the result data type can be easily define.
+*/
+
+export const map : <A,B>((f:(a:A)=>B, r:result<A>) => result<B>) = p => {
+  match(p[1], {
+    Failure: m => Failure(m),
+    Success: a => Success(p[0](a))
+  });
+};
+
+/*
+  Reference: https://ligolang.org/docs/advanced/polymorphism
+*/ 
