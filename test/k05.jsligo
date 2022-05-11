@@ -1,19 +1,24 @@
 #import "common/check.jsligo" "Check"
 #import "../lib/k05_conditional.jsligo" "Koan"
 
-const test01 = (Check.check(Koan.compare_string(["a","a"]) == true));
-const test02 = (Check.check(Koan.compare_string(["a","b"]) == false));
+const case01 = ():unit => Check.assert_equal(Koan.compare_string(["a","a"]), true);
+const case02 = ():unit => Check.assert_equal(Koan.compare_string(["a","b"]), false);
 
-const test03 = (Check.check(Koan.boolean_and([true,true]) == true));
-const test04 = (Check.check(Koan.boolean_and([true,false]) == false));
-const test05 = (Check.check(Koan.boolean_and([false,true]) == false));
-const test06 = (Check.check(Koan.boolean_and([false,false]) == false));
+const case03 = ():unit => Check.assert_equal(Koan.boolean_and([true,true]), true);
+const case04 = ():unit => Check.assert_equal(Koan.boolean_and([true,false]), false);
+const case05 = ():unit => Check.assert_equal(Koan.boolean_and([false,true]), false);
+const case06 = ():unit => Check.assert_equal(Koan.boolean_and([false,false]), false);
 
-const test07 = (Check.check(Koan.boolean_or([true,true]) == true));
-const test08 = (Check.check(Koan.boolean_or([true,false]) == true));
-const test09 = (Check.check(Koan.boolean_or([false,true]) == true));
-const test10 = (Check.check(Koan.boolean_or([false,false]) == false));
+const case07 = ():unit => Check.assert_equal(Koan.boolean_or([true,true]), true);
+const case08 = ():unit => Check.assert_equal(Koan.boolean_or([true,false]), true);
+const case09 = ():unit => Check.assert_equal(Koan.boolean_or([false,true]), true);
+const case10 = ():unit => Check.assert_equal(Koan.boolean_or([false,false]), false);
 
-const test11 = (Check.check(Koan.selection([1,2]) == "i1 < i2"));
-const test12 = (Check.check(Koan.selection([2,2]) == "i1 = i2"));
-const test13 = (Check.check(Koan.selection([2,1]) == "i1 > i2"));
+const case11 = ():unit => Check.assert_equal(Koan.selection([1,2]), "i1 < i2");
+const case12 = ():unit => Check.assert_equal(Koan.selection([2,2]), "i1 = i2");
+const case13 = ():unit => Check.assert_equal(Koan.selection([2,1]), "i1 > i2");
+
+const test = Check.cases(list([ 
+    case01, case02, case03, case04, case05, case06, case07, 
+    case08, case09, case10, case11, case12, case13
+]));

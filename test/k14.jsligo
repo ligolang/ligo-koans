@@ -25,5 +25,9 @@ const case02_ = (): bool => {
     });    
 };
 
-const test01 = Check.check(case01_());
-const test02 = Check.check(case02_());
+const case01 = ():unit => Check.assert_equal(case01_(), true);
+const case02 = ():unit => Check.assert_equal(case02_(), true);
+
+const test = Check.cases(list([ 
+    case01, case02
+]));

@@ -1,13 +1,15 @@
 #import "common/check.jsligo" "Check"
 #import "../lib/k02_numerical_types.jsligo" "Koan"
 
-const test01 = (Check.check(Koan.add_int(5, 3) == 8));
-const test02 = (Check.check(Koan.add_int_and_nat(5, 3 as nat) == 8));
-const test03 = (Check.check(Koan.add_nat(5 as nat, 3 as nat) == (8 as nat)));
-const test04 = (Check.check(Koan.add_tez(5 as tez, 3 as tez) == (8 as tez)));
-const test05 = (Check.check(Koan.substract_int(5, 3) == 2));
-const test06 = (Check.check(Koan.substract_int_and_nat(5, 3 as nat) == 2));
-const test07 = (Check.check(Koan.substract_nat(5 as nat, 3 as nat) == 2));
-const test08 = (Check.check(Koan.substract_tez(5 as tez, 3 as tez) == (2 as tez)));
+const case01 = ():unit => Check.assert_equal(Koan.add_int(5, 3), 8);
+const case02 = ():unit => Check.assert_equal(Koan.add_int_and_nat(5, 4 as nat), 9);
+const case03 = ():unit => Check.assert_equal(Koan.add_nat(5 as nat, 3 as nat), 8 as nat);
+const case04 = ():unit => Check.assert_equal(Koan.add_tez(5 as tez, 3 as tez), 8 as tez);
+const case05 = ():unit => Check.assert_equal(Koan.substract_int(5, 3), 2);
+const case06 = ():unit => Check.assert_equal(Koan.substract_int_and_nat(5, 3 as nat), 2);
+const case07 = ():unit => Check.assert_equal(Koan.substract_nat(5 as nat, 3 as nat), 2);
+const case08 = ():unit => Check.assert_equal(Koan.substract_tez(5 as tez, 3 as tez), 2 as tez);
 
-// EOF
+const test = Check.cases(list([ 
+    case01, case02, case03, case04, case05, case06, case07, case08
+]));

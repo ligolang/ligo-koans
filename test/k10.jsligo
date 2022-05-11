@@ -1,4 +1,8 @@
 #import "common/check.jsligo" "Check"
 #import "../lib/k10_option.jsligo" "Koan"
 
-const test01 = (Check.check(Koan.map((n:int):int => n + 1, Some(3)) == Some(4)));
+const case01 = ():unit => Check.assert_equal(Koan.map((n:int):int => n + 1, Some(3)), Some(4));
+
+const test = Check.cases(list([ 
+    case01
+]));

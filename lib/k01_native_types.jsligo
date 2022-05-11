@@ -1,6 +1,6 @@
 #import "common/todo.jsligo" "K"
 
-export const hello = () : string => 
+export const hello = () : string =>     
     K.todo("Should return \"Hello\"");
 
 export const one = () : int => 

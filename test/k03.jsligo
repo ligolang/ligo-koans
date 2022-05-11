@@ -1,8 +1,10 @@
 #import "common/check.jsligo" "Check"
 #import "../lib/k03_string_type.jsligo" "Koan"
 
-const test01 = (Check.check(Koan.concat(["Hello", " World!"]) == "Hello World!"));
-const test02 = (Check.check(Koan.slice("Hello") == "H"));
-const test03 = (Check.check(Koan.length("Hello") == (5 as nat)));
+const case01 = ():unit => Check.assert_equal(Koan.concat(["Hello", " World!"]), "Hello World!");
+const case02 = ():unit => Check.assert_equal(Koan.slice("Hello"), "H");
+const case03 = ():unit => Check.assert_equal(Koan.length("Hello"), 5 as nat);
 
-// EOF
+const test = Check.cases(list([ 
+    case01, case02, case03
+]));

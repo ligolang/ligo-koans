@@ -1,5 +1,9 @@
 #import "common/check.jsligo" "Check"
 #import "../lib/k13_set_type.jsligo" "Koan"
 
-const test01 = (Check.check(Koan.add_all(Set.literal(list([1,2]))) == 3));
-const test02 = (Check.check(Koan.map((i:int):int => i + 1, Set.literal(list([1,2]))) == Set.literal(list([2,3]))));
+const case01 = ():unit => Check.assert_equal(Koan.add_all(Set.literal(list([1,2]))), 3);
+const case02 = ():unit => Check.assert_equal(Koan.map((i:int):int => i + 1, Set.literal(list([1,2]))), Set.literal(list([2,3])));
+
+const test = Check.cases(list([ 
+    case01, case02
+]));

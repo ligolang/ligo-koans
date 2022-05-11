@@ -1,22 +1,26 @@
 #import "common/check.jsligo" "Check"
 #import "../lib/k09_variant_types.jsligo" "Koan"
 
-const test01 = (Check.check(Koan.new_heads() == Heads()));
-const test02 = (Check.check(Koan.new_tails() == Tails()));
-const test03 = (Check.check(Koan.flip_coin(Koan.new_heads()) == Tails()));
-const test04 = (Check.check(Koan.flip_coin(Koan.new_tails()) == Heads()));
-const test05 = (Check.check(
+const case01 = ():unit => Check.assert_equal(Koan.new_heads(), Heads());
+const case02 = ():unit => Check.assert_equal(Koan.new_tails(), Tails());
+const case03 = ():unit => Check.assert_equal(Koan.flip_coin(Koan.new_heads()), Tails());
+const case04 = ():unit => Check.assert_equal(Koan.flip_coin(Koan.new_tails()), Heads());
+const case05 = ():unit => Check.assert_equal(
     Koan.play(Play((u:unit):Koan.coin => Heads()), { heads: (0 as nat), tails:(0 as nat)}) 
-    == 
+   , 
     ({ heads: (1 as nat), tails:(0 as nat)})
-));
-const test06 = (Check.check(
+);
+const case06 = ():unit => Check.assert_equal(
     Koan.play(Play((u:unit):Koan.coin => Tails()), { heads: (0 as nat), tails:(0 as nat)}) 
-    == 
+   , 
     ({ heads: (0 as nat), tails:(1 as nat)})
-));
-const test07 = (Check.check(
+);
+const case07 = ():unit => Check.assert_equal(
     Koan.play(Reset(), { heads: (1 as nat), tails:(1 as nat)}) 
-    == 
+   , 
     ({ heads: (0 as nat), tails:(0 as nat)})
-));
+);
+
+const test = Check.cases(list([ 
+    case01, case02, case03, case04, case05, case06, case07
+]));

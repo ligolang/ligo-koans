@@ -1,7 +1,9 @@
 #import "common/check.jsligo" "Check"
 #import "../lib/k08_record_types.jsligo" "Koan"
 
-const test01 = (Check.check(Koan.account () == ({ balance: 5 as tez, transactions: 3 as nat }) ));
-const test02 = (Check.check(Koan.modify_account (Koan.account ()) == ({ balance: 5 as tez, transactions: 5 as nat }) ));
+const case01 = ():unit => Check.assert_equal(Koan.account (), ({ balance: 5 as tez, transactions: 3 as nat }) );
+const case02 = ():unit => Check.assert_equal(Koan.modify_account (Koan.account ()), ({ balance: 5 as tez, transactions: 5 as nat }) );
 
-// EOF
+const test = Check.cases(list([ 
+    case01, case02
+]));

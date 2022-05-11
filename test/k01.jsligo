@@ -1,11 +1,13 @@
 #import "common/check.jsligo" "Check"
 #import "../lib/k01_native_types.jsligo" "Koan"
 
-const test01 = (Check.check(Koan.hello() == "Hello"));
-const test02 = (Check.check(Koan.one() == 1));
-const test03 = (Check.check(Koan.one_nat() == (1 as nat)));
-const test04 = (Check.check(Koan.one_tez() == (1 as tez)));
-const test05 = (Check.check(Koan.true_value() == true));
-const test06 = (Check.check(Koan.increment_nat(1 as nat) == (2 as nat)));
+const case01 = ():unit => Check.assert_equal(Koan.hello(), "Hello");
+const case02 = ():unit => Check.assert_equal(Koan.one(), 1);
+const case03 = ():unit => Check.assert_equal(Koan.one_nat(), 1 as nat);
+const case04 = ():unit => Check.assert_equal(Koan.one_tez(), 1 as tez);
+const case05 = ():unit => Check.assert_equal(Koan.true_value(), true);
+const case06 = ():unit => Check.assert_equal(Koan.increment_nat(1 as nat), 2 as nat);
 
-// EOF
+const test = Check.cases(list([ 
+    case01, case02, case03, case04, case05, case06 
+]));

@@ -1,6 +1,10 @@
 #import "common/check.jsligo" "Check"
 #import "../lib/k07_tuple_types.jsligo" "Koan"
 
-const test01 = (Check.check(Koan.new_point(1,2) == [1,2]));
-const test02 = (Check.check(Koan.absissa(Koan.new_point(1,2)) == 1));
-const test03 = (Check.check(Koan.ordinate(Koan.new_point(1,2)) == 2));
+const case01 = ():unit => Check.assert_equal(Koan.new_point(1,2), [1,2]);
+const case02 = ():unit => Check.assert_equal(Koan.absissa(Koan.new_point(1,2)), 1);
+const case03 = ():unit => Check.assert_equal(Koan.ordinate(Koan.new_point(1,2)), 2);
+
+const test = Check.cases(list([ 
+    case01, case02, case03
+]));

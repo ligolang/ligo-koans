@@ -1,8 +1,12 @@
 #import "common/check.jsligo" "Check"
 #import "../lib/k06_function.jsligo" "Koan"
 
-let test01 = (Check.check(Koan.max([1,2]) == 2));
-let test02 = (Check.check(Koan.concat("a")("b") == "ab"));
-let test03 = (Check.check(Koan.handle((b:string): string => ("a" + b),"b") == "ab"));
-let test04 = (Check.check(Koan.curry((a:int, b:int): int => a + b)(1)(2) == 3));
-let test05 = (Check.check(Koan.uncurry(Koan.curry((a:int, b:int): int => a + b))([1,2]) == 3));
+let case01 = ():unit => Check.assert_equal(Koan.max([1,2]), 2);
+let case02 = ():unit => Check.assert_equal(Koan.concat("a")("b"), "ab");
+let case03 = ():unit => Check.assert_equal(Koan.handle((b:string): string => ("a" + b),"b"), "ab");
+let case04 = ():unit => Check.assert_equal(Koan.curry((a:int, b:int): int => a + b)(1)(2), 3);
+let case05 = ():unit => Check.assert_equal(Koan.uncurry(Koan.curry((a:int, b:int): int => a + b))([1,2]), 3);
+
+const test = Check.cases(list([ 
+    case01, case02, case03, case04, case05
+]));
