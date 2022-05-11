@@ -1,3 +1,5 @@
+type error<a> = | ["ERROR", {received:a} ];
+
 const equal : <T>((a:T, b:T) => bool) = p => {
     Bytes.pack(p[0]) == Bytes.pack(p[1]);
 };
@@ -10,8 +12,6 @@ const status = (b:bool) : string => {
     }
 };
 
-type error<a> = | ["ERROR", {received:a} ];
-
 const assert_equal : <T>((result:T, expected:T) => unit) = p => {
     const result = equal(p[0], p[1]);
 
@@ -20,9 +20,9 @@ const assert_equal : <T>((result:T, expected:T) => unit) = p => {
     if (result == false) {
         Test.log(ERROR({received: p[0]}));
         failwith("Test case fails");
-    }
+    };
 };
 
 const cases = (l:list<(u:unit)=>unit>):unit => {
     List.iter((f:(u:unit)=>unit):unit => f(unit), l);
-}
+};

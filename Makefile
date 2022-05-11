@@ -87,3 +87,7 @@ k15: test/k15.jsligo
 k16: test/k16.jsligo 
 	@echo "[Testing] $^"
 	@$(ligo_compiler) run test $^
+
+k17: test/k17.jsligo 
+	@echo "[Testing] $^"
+	@$(ligo_compiler) run test $^

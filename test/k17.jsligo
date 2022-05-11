@@ -1,0 +1,4 @@
+#import "common/check.jsligo" "Check"
+#import "../lib/k17_polymorphism.jsligo" "Koan"
+
+const test = "No tests!";

@@ -56,6 +56,7 @@ export const hello = () : string =>
 ```sh
 jsligo-koans ➤ make k01
 [Testing] test/k01.jsligo
+("✅" , {expected = "Hello"})
 
 Test failed with "Should return 1"
 Trace:
@@ -70,15 +71,14 @@ Then solves each exercise step by step and finally for k01 you should
 have the following execution trace.
 
 ```
-jsligo-koans ➤ make k01
+jsligo-koans ➤ make all
 [Testing] test/k01.jsligo
-Everything at the top-level was executed.
-- test01 exited with value "✅".
-- test02 exited with value "✅".
-- test03 exited with value "✅".
-- test04 exited with value "✅".
-- test05 exited with value "✅".
-- test06 exited with value "✅".
+("✅" , {expected = "Hello"})
+("✅" , {expected = 1})
+("✅" , {expected = 1n})
+("✅" , {expected = 1000000mutez})
+("✅" , {expected = true})
+("✅" , {expected = 2n})
 ```
 
 Then solve `k02`, `k03`, ..., `k15` and finally `k16`. Each Koan covers a
