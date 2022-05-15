@@ -5,7 +5,7 @@
     can define a type reflecting what can be played during a shifumi game:
 */
 
-type play = | ["Paper"] | ["Cisor"] | ["Stone"];
+type play = | ["Paper"] | ["Scissor"] | ["Stone"];
 
 /*
     Here `Paper`, `Cisor` and `Stone` are called data constructors. Then each
@@ -13,7 +13,7 @@ type play = | ["Paper"] | ["Cisor"] | ["Stone"];
 */
 
 const paper : play = Paper();
-const cisor : play = Cisor();
+const scissor : play = Scissor();
 const stone : play = Stone();    
 
 /*
@@ -58,7 +58,7 @@ export const new_tails = (): coin =>
 export const is_paper = (p:play): bool => {
     match(p, {
         Paper: () => true,
-        Cisor: () => false,
+        Scissor: () => false,
         Stone: () => false
     });
 };

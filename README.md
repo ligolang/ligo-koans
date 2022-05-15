@@ -26,8 +26,7 @@ complete the code. And this is done thanks to unit testing.
 
 ## Howto ?
 
-The koans are in files from k01 to k16 in the lib directory.
-Each one can be executed thanks to the `make` command:
+The koans are in files from k01 to k16 in the lib directory. Each one can be executed independantly thanks to the `make` command:
 
 ```sh
 jsligo-koans ➤ make k01
@@ -42,8 +41,7 @@ File "test/k01.jsligo", line 4, characters 28-40
 make: *** [k01] Error 
 ```
 
-Open the file `k01_native_types` and fix the code. For instance the previous 
-one can be solved replacing the `K.todo(...)` by the response.
+Open the file `k01_native_types` and fix the code. For instance the previous one can be solved replacing the `K.todo(...)` by the response.
 
 ### Before
 
@@ -87,8 +85,8 @@ jsligo-koans ➤ make all
 ("✅" , {expected = 2n})
 ```
 
-Then solve `k02`, `k03`, ..., `k15` and finally `k16`. Each Koan covers a
-specific topic of the language.
+Once k01 is solved you can do the same for`k02`, `k03`, ..., `k15` and finally `k16`. Each Koan covers a
+specific topic of the language. Finally, `k17` introduces polymorphim
 
 # License
 

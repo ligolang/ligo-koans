@@ -2,7 +2,7 @@
 #import "../lib/k07_tuple_types.jsligo" "Koan"
 
 const case01 = ():unit => Check.assert_equal(Koan.new_point(1,2), [1,2]);
-const case02 = ():unit => Check.assert_equal(Koan.absissa(Koan.new_point(1,2)), 1);
+const case02 = ():unit => Check.assert_equal(Koan.abscissa(Koan.new_point(1,2)), 1);
 const case03 = ():unit => Check.assert_equal(Koan.ordinate(Koan.new_point(1,2)), 2);
 
 const test = Check.cases(list([ 

@@ -12,7 +12,7 @@ export let new_point = (x:int,y:int): point => {
     // K.todo("Should return the a point");
 };
 
-export let absissa = (p:point): int => {
+export let abscissa = (p:point): int => {
     p[0];
     // K.todo("Should return the first component of the point");
 };

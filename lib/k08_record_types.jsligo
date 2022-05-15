@@ -3,8 +3,6 @@
 /*
   Records are one-way data of different types can be packed into a single type. A record is made of a set of fields, 
   which are made of a field name and a field type.
-
-  Note: Record expressions should be in parenthesis
 */
 
 type account_data = {
@@ -12,8 +10,9 @@ type account_data = {
   transactions: nat
 };
 
-export let account = () : account_data => 
+export let account = () : account_data => {
   K.todo("Should return an account data with a balance of 5 tez and 3 transactions");
+}
 
 /*
   Given a record value, it is a common design pattern to update only a small number of its fields. 
@@ -25,8 +24,9 @@ export let account = () : account_data =>
   Reference; https://ligolang.org/docs/language-basics/maps-records#functional-updates
 */
 
-export let modify_account = (account: account_data) : account_data => 
+export let modify_account = (account: account_data) : account_data => {
   K.todo("Should return an account data with 5 transactions");
+}
 
 /*
   Reference: https://ligolang.org/docs/language-basics/maps-records
