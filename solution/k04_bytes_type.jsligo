@@ -23,7 +23,7 @@ export const slice = (n1: bytes) : bytes =>
     The length of a bytes can be found using a built-in function bytes.length
 */
 
-export const length = (n1: bytes) : nat =>
+export const length = (n1:bytes) : nat =>
     Bytes.length(n1);
     // K.todo("Should return The length of n1");
 
