@@ -25,15 +25,20 @@ export const cons = (h:int, t:list<int>): list<int> => {
 };
 
 /* 
-    Pattern matching for list is particular and has its own syntax. For instance the predicate checking
-    the emptyness of a given list can be expressed thanks to this dedicated matching operation.
+    Pattern matching for lists has its own syntax. 
+
+      match(my_int_list, list([
+        ([] : list<int>) => ..., 
+        ([hd, ...tl] : list<int>) => ...
+      ]));
 */
 
-const is_empty = (v : list<int>) : bool => {
-  match(v, list([
-    ([] : list<int>) => true,
-    ([hd, ...tl] : list<int>) => false
-  ]));
+/*
+    Write a predicate checking the emptiness of a given list.
+*/
+
+export const is_empty = (v : list<int>) : bool => {
+    K.todo("Should return the head of the parametric list in a Some; None otherwise");
 };
 
 /*
