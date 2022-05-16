@@ -8,16 +8,16 @@ description: Set of koans dedicated to JsLIGO syntax
 
 # Prerequisites
 
+## Remote execution
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ligolang/ligo-koans)
+
 ## Local execution
 
 Please install this software first on your machine or use online alternative : 
 
 - [ ] [VS Code](https://code.visualstudio.com/download) : as text editor
 - [ ] [ligo](https://ligolang.org/docs/intro/installation/) : high level language that's transpile to michelson low level language and provide lot of development support for Tezos
-
-## Remote execution
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ligolang/ligo-koans)
 
 # What's a Koan
 
