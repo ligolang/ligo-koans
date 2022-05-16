@@ -13,7 +13,7 @@
    the division in a `Some`.
 */
 
-export const div = ([a, b]: [int, int]): option<int> => {
+export const div = (a:int, b: int): option<int> => {
     if (b == 0) {
         return None();
     } else {
@@ -36,6 +36,19 @@ export const map = (f:((n:int) => int), s: option<int>): option<int> => {
     // K.todo("Should apply the function on the value in a Some and return an option with the new value, Return None otherwise");
 };
 
+/* 
+  Write the function returning the first character as a string or nothing.
+*/
+
+export const first = (n: string) : option<string> => {
+    if (String.length(n) == (0 as nat)) {
+        return None();
+    } else {
+        return Some (String.sub(0 as nat, 1 as nat, n));
+    }
+    // K.todo("Should return The first character of n");
+}
+    
 /*
     Reference: https://ligolang.org/docs/language-basics/unit-option-pattern-matching#optional-values
 */

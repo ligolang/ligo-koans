@@ -14,8 +14,9 @@ export const concat = (n1:string,n2:string) : string =>
     - the string being sliced
 */
 
-export const slice = (n1: string) : string =>
-    K.todo("Should return The first character of n1");
+export const first = (n: string) : string =>
+    // We assume `n` is never the empty string here
+    K.todo("Should return The first character of n");
 
 /*
     The length of a string can be found using a built-in function String.length

@@ -5,7 +5,9 @@ const case01 = ():unit => Check.assert_equal(Koan.div(10,2), Some(5));
 const case02 = ():unit => Check.assert_equal(Koan.div(10,0), None() as option<int>);
 const case03 = ():unit => Check.assert_equal(Koan.map((n:int):int => n + 1, Some(3)), Some(4));
 const case04 = ():unit => Check.assert_equal(Koan.map((n:int):int => n + 1, None() as option<int>), None() as option<int>);
+const case05 = ():unit => Check.assert_equal(Koan.first("Hello"), Some("H"));
+const case06 = ():unit => Check.assert_equal(Koan.first(""), None() as option<string>);
 
 const test = Check.cases(list([ 
-    case01, case02, case03, case04
+    case01, case02, case03, case04, case05, case06
 ]));

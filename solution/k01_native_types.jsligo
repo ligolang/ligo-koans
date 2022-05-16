@@ -1,5 +1,14 @@
 #import "common/todo.jsligo" "K"
 
+/*
+    LIGO is strongly and statically typed. This means that the compiler checks 
+    how your contract processes data, ensuring that each function's expectations 
+    are met. If it passes the test, your contract will not fail at run-time due 
+    to some inconsistent assumptions on your data. This is called type checking.
+
+    In addition, LIGO types are built on top of Michelson's type system.
+*/
+
 export const hello = () : string => 
     "Hello";
     // K.todo("Should return \"Hello\"");
