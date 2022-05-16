@@ -86,7 +86,7 @@ jsligo-koans ➤ make all
 ```
 
 Once k01 is solved you can do the same for`k02`, `k03`, ..., `k15` and finally `k16`. Each Koan covers a
-specific topic of the language. Finally, `k17` introduces polymorphim
+specific topic of the language. Finally, `k17` introduces polymorphism.
 
 # License
 
