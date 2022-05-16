@@ -17,16 +17,6 @@ const scissor : play = Scissor();
 const stone : play = Stone();    
 
 /*
-    One important type define as a variant with only one constructor is `unit`.
-
-    ```ligo
-    type unit = | ["Unit"];
-    ```
-
-    This type denotes a set with one and only one value `Unit`.
-*/
-
-/*
     Define a coin flipping type with `Heads` and `Tails`.
 */
 

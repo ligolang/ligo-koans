@@ -17,22 +17,11 @@ const scissor : play = Scissor();
 const stone : play = Stone();    
 
 /*
-    One important type define as a variant with only one constructor is `unit`.
-
-    ```ligo
-    type unit = | ["Unit"];
-    ```
-
-    This type denotes a set with one and only one value `Unit`.
-*/
-
-/*
     Define a coin flipping type with `Heads` and `Tails`.
 */
 
 export type coin = 
     | ["Heads"] | ["Tails"];
-    // Definition the type replacing unit type
 
 export const new_heads = (): coin => 
     K.todo("Should return a heads data");
@@ -119,7 +108,7 @@ type flip = ((u:unit) => coin);
 export type turn = | ["Play", flip] | ["Reset"];
 
 export const play = (t:turn,g:game): game => {
-    K.todo("Should return game reflecting the turn played.");
+    K.todo("Should return a new game reflecting the turn played.");
 };
 
 /*
