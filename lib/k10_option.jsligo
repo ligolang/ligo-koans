@@ -6,27 +6,25 @@
     when calling a partial function, that is, a function that is not defined 
     for some inputs. In that case, the value of the option type would be None, 
     otherwise Some (v), where v is some meaningful value of any type.
-
-    One immediate example is the divide operation which is not define when we
-    try to devide by `0`.
 */
 
-let div = ([a, b]: [nat, nat]): option<nat> => {
-    if (b == (0 as nat)) {
-        return None();
-    } else {
-        return Some(a/b);
-    };
+/*
+   Write the divide operation returning `None` when we try to divide by `0` or 
+   the division in a `Some`.
+*/
+
+export const div = ([a, b]: [int, int]): option<int> => {
+    K.todo("Should divide and return the result in a Some, or Return None when it's not possible");
 };
 
 /*
-  Give a function which acts on int, write the function with an option and
-  a function which perform the paramtric function when it's a some and do
+  Given a function which acts on int, write the function with an option and
+  a function which performs the paramtric function when it's a Some and do
   nothing when it's a None.
 */
 
 export const map = (f:((n:int) => int), s: option<int>): option<int> => {
-    K.todo("Should apply the function on the value in a Some and return an option with the new value, Return None otherwise");
+   K.todo("Should apply the function on the value in a Some and return an option with the new value, Return None otherwise");
 };
 
 /*

@@ -9,21 +9,16 @@
 */
 
 export const sum_all = (l:list<nat>) : nat => {
-    let result = 0 as nat;
-    for (const e of l) {
-        result = result + e;
-    };
-    return result;
-
     // K.todo("Should compute the sum of all elements using for-loop control structure")
 };
 
 /*
-    JsLIGO currently also supports iteration through while loops.
+    JsLIGO also supports iteration through while loops. This control structure is used when data is not
+    list, set or map.
 */    
 
 export const factorial = (n:nat) : nat => {
-    K.todo("Should compute factorial using while-loop control structure")
+    // K.todo("Should compute factorial using while-loop control structure")
 };
 
 /*

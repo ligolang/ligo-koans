@@ -19,8 +19,9 @@ export const sum_all = (l:list<nat>) : nat => {
 };
 
 /*
-    JsLIGO currently also supports iteration through while loops.
-*/    
+    JsLIGO also supports iteration through while loops. This control structure is used when data is not
+    list, set or map.
+*/     
 
 export const factorial = (n:nat) : nat => {
 

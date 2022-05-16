@@ -12,10 +12,11 @@
 
 /*
   Write a function throwing an error if the parameter is a
-  negative number; unit otherwise
+  negative number; return unit otherwise
 */
 
 export const assert_not_negative = (i:int): unit => {
+    assert_with_exn(i >= 0, "Negative number")
     if (i < 0) {
         failwith("Negative number"); 
     };
