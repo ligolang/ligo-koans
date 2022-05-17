@@ -24,9 +24,6 @@ export const one_tez = () : tez =>
 export const true_value = () : bool => 
     K.todo("Should return true");
 
-export const increment_nat = (n:nat) : nat =>
-    K.todo("Should increment by 1 the parameter");    
-
 /* 
     Reference: https://ligolang.org/docs/language-basics/math-numbers-tez
 */

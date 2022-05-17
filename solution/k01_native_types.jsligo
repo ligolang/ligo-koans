@@ -29,10 +29,6 @@ export const true_value = () : bool =>
     true;
     // K.todo("Should return true");
 
-export const increment_nat = (n:nat) : nat =>
-    n + (1 as nat);
-    // K.todo("Should increment by 1 the parameter");    
-
 /* 
     Reference: https://ligolang.org/docs/language-basics/math-numbers-tez
 */

@@ -24,9 +24,9 @@ export const first = (n: string) : string =>
     The length of a string can be found using a built-in function String.length
 */
 
-export const length = (n1: string) : nat =>
+export const length = (n: string) : nat =>
     String.length(n1);
-    // K.todo("Should return The length of n1");
+    // K.todo("Should return The length of n");
 
 /*
     References: 

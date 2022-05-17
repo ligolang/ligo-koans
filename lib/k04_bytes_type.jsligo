@@ -14,8 +14,8 @@ export const concat = (n1:bytes,n2:bytes) : bytes =>
     - the bytes being sliced
 */
 
-export const slice = (n1: bytes) : bytes =>
-    K.todo("Should return The first byte of n1");
+export const first = (n: bytes) : bytes =>
+    K.todo("Should return The first byte of n");
 
 /*
     The length of a bytes can be found using a built-in function bytes.length

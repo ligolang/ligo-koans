@@ -25,7 +25,7 @@ const max = (a:int,b:int): int =>
 
 /*
   Write a function waiting for a string which returns a function
-  waiting for another char and returns the string concatenation.
+  waiting for another string and returns the string concatenation.
 
   concat("a")("b") = "ab"
 */    

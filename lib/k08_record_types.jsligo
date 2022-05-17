@@ -12,7 +12,13 @@ type account_data = {
 
 export let account = () : account_data => {
   K.todo("Should return an account data with a balance of 5 tez and 3 transactions");
-}
+};
+
+/*
+  If we want the contents of a given field, we use the (.) infix operator
+*/
+
+const balance : tez = (account()).balance;
 
 /*
   Given a record value, it is a common design pattern to update only a small number of its fields. 

@@ -31,7 +31,7 @@ const max = (a:int,b:int): int => {
 
 /*
   Write a function waiting for a string which returns a function
-  waiting for another char and returns the string concatenation.
+  waiting for another string and returns the string concatenation.
 
   concat("a")("b") = "ab"
 */    
@@ -47,7 +47,7 @@ export const concat = (a:string) : ((b:string) => string) => {
 */
 
 export const handle = (f:((b:string) => string), a:string) : string => {
-    f(a);
+    return f(a);
     // K.todo("Should return the application of `f` on `a`");
 };
 

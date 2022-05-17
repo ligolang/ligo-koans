@@ -6,8 +6,7 @@ const case02 = ():unit => Check.assert_equal(Koan.one(), 1);
 const case03 = ():unit => Check.assert_equal(Koan.one_nat(), 1 as nat);
 const case04 = ():unit => Check.assert_equal(Koan.one_tez(), 1 as tez);
 const case05 = ():unit => Check.assert_equal(Koan.true_value(), true);
-const case06 = ():unit => Check.assert_equal(Koan.increment_nat(1 as nat), 2 as nat);
 
 const test = Check.cases(list([ 
-    case01, case02, case03, case04, case05, case06 
+    case01, case02, case03, case04, case05 
 ]));
