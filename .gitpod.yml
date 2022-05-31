@@ -20,7 +20,7 @@ github:
     addLabel: false
 vscode:
   extensions:
-    - ligolang-publish.ligo-vscode@0.4.10
+    - ligolang-publish.ligo-vscode@0.4.11
     - baking-bad.michelson@0.1.0
     - serokell-io.michelson-debugger@0.1.1
 tasks:

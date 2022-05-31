@@ -56,5 +56,17 @@ export const substract_tez = (n1:tez,n2:tez) : tez =>
     // K.todo("Should substract two tez values");
 
 /*
+    Numerical conversion can be done from int to nat and vice versa
+*/
+
+export const int_from_nat = (n1:nat) : int =>
+    int(n1);
+    // K.todo("Should cast a nat to an int");
+
+export const nat_from_int = (n1:int) : nat =>
+    abs(n1);
+    // K.todo("Should cast an int to a nat");
+
+/*
     Reference: https://ligolang.org/docs/language-basics/math-numbers-tez
 */

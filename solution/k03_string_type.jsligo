@@ -25,7 +25,7 @@ export const first = (n: string) : string =>
 */
 
 export const length = (n: string) : nat =>
-    String.length(n1);
+    String.length(n);
     // K.todo("Should return The length of n");
 
 /*

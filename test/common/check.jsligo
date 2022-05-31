@@ -6,9 +6,9 @@ const equal : <T>((a:T, b:T) => bool) = p => {
 
 const status = (b:bool) : string => {
     if (b) {
-        return "✅";
+        return "[SUCCESS]";
     } else {
-        return "❌";        
+        return "[FAILURE]";        
     }
 };
 
@@ -19,7 +19,6 @@ const assert_equal : <T>((result:T, expected:T) => unit) = p => {
 
     if (result == false) {
         Test.log(ERROR({received: p[0]}));
-        // failwith("Test case fails");
     };
 };
 

@@ -51,6 +51,12 @@ export const handle = (f:((b:string) => string), a:string) : string => {
     // K.todo("Should return the application of `f` on `a`");
 };
 
+/* -------------------------------------------------------------------------
+|    
+|  Optional section ....
+|
++------------------------------------------------------------------------ */    
+
 /*
     Finally we can write functions which return another function. On typical
     one is the capability to transform a function waiting for two parameters
