@@ -60,7 +60,7 @@ export const hello = () : string =>
 ```sh
 jsligo-koans ➤ make k01
 [Testing] test/k01.jsligo
-("✅" , {expected = "Hello"})
+("[SUCCESS]" , {expected = "Hello"})
 
 Test failed with "Should return 1"
 Trace:
@@ -77,12 +77,12 @@ have the following execution trace.
 ```
 jsligo-koans ➤ make all
 [Testing] test/k01.jsligo
-("✅" , {expected = "Hello"})
-("✅" , {expected = 1})
-("✅" , {expected = 1n})
-("✅" , {expected = 1000000mutez})
-("✅" , {expected = true})
-("✅" , {expected = 2n})
+("[SUCCESS]" , {expected = "Hello"})
+("[SUCCESS]" , {expected = 1})
+("[SUCCESS]" , {expected = 1n})
+("[SUCCESS]" , {expected = 1000000mutez})
+("[SUCCESS]" , {expected = true})
+("[SUCCESS]" , {expected = 2n})
 ```
 
 Once k01 is solved you can do the same for`k02`, `k03`, ..., `k15` and finally `k16`. Each Koan covers a
