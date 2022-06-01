@@ -48,6 +48,8 @@ export const handle = (f:((b:string) => string), a:string) : string => {
 |
 +------------------------------------------------------------------------ */    
 
+export const do_optional_part = true;
+
 /*
     Finally we can write functions which return another function. On typical
     one is the capability to transform a function waiting for two parameters
