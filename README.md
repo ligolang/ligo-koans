@@ -74,7 +74,7 @@ make: *** [k01] Error 1
 Then solves each exercise step by step and finally for k01 you should 
 have the following execution trace.
 
-```
+```sh
 jsligo-koans ➤ make all
 [Testing] test/k01.jsligo
 ("[SUCCESS]" , {expected = "Hello"})
