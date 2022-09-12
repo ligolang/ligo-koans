@@ -1,3 +1,11 @@
+
+const prefix = Option.unopt(Test.chr(27 as nat));
+const reset = prefix + "[0m";
+const red = prefix + "[31m"
+const green = prefix + "[32m"
+const to_green = (s:string) : string => green + s + reset;
+const to_red = (s:string) : string => red + s + reset;
+
 type error<a> = | ["ERROR", {received:a} ];
 
 const equal : <T>((a:T, b:T) => bool) = p => {
@@ -6,19 +14,19 @@ const equal : <T>((a:T, b:T) => bool) = p => {
 
 const status = (b:bool) : string => {
     if (b) {
-        return "[SUCCESS]";
+        return to_green( "[SUCCESS]");
     } else {
-        return "[FAILURE]";        
+        return to_red("[FAILURE]");        
     }
 };
 
 const assert_equal : <T>((result:T, expected:T) => unit) = p => {
     const result = equal(p[0], p[1]);
 
-    Test.log(status(result), { expected: p[1] });
+    Test.println(status(result) +  " expected: " + Test.to_string(p[1]));
 
     if (result == false) {
-        Test.log(ERROR({received: p[0]}));
+        Test.println("          received: " + Test.to_string(p[0]));
     };
 };
 

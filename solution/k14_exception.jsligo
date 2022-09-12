@@ -23,7 +23,7 @@ export const assert_not_negative = (i:int): unit => {
 /*
     Contract entry point for the tests
 */
-export const main = (p:int, s:unit): [list<operation>, unit] => {
+export const main = (p:int, _s:unit): [list<operation>, unit] => {
     [list([]) as list<operation>, assert_not_negative(p)];
 };
 

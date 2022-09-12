@@ -14,7 +14,7 @@ export const concat = (n1:string,n2:string) : string =>
     - the length describing the number of characters that will be copied (starting from the given offset)
     - the string being sliced
 */
-
+ 
 export const first = (n: string) : string =>
     // We assume `n` is never the empty string here
     String.sub(0 as nat, 1 as nat, n);

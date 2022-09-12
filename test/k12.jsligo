@@ -5,7 +5,7 @@ const case01 = ():unit => Check.assert_equal(Koan.find(Koan.transpose, 1, "?"), 
 const case02 = ():unit => Check.assert_equal(Koan.find(Koan.transpose, 2, "?"), "?");
 const case03 = ():unit => Check.assert_equal(((Koan.update(Koan.transpose, 1, "Un"))[0]), Some("One"));
 const case04 = ():unit => Check.assert_equal(Koan.map(
-    (k:int,v:string): string => "(" + v + ")", Koan.transpose) 
+    (_k:int,v:string): string => "(" + v + ")", Koan.transpose) 
    , 
     Map.literal(list([ [0, "(Zero)"], [1, "(One)"] ]))
 );

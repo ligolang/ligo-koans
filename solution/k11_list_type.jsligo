@@ -13,7 +13,7 @@
 */
 
 export const no_ints = (): list<int> => list([]);
-export const single_int = (p:int): list<int> => list([1]);
+export const single_int = (p:int): list<int> => list([p]);
 
 /*
     In JsLIGO, the cons operator is infix and noted , .... It is not symmetric: on the left 
@@ -40,7 +40,7 @@ export const cons = (h:int, t:list<int>): list<int> => {
 export const is_empty = (v : list<int>) : bool => {
     match(v, list([
       ([] : list<int>) => true,
-      ([hd, ...tl] : list<int>) => false
+      ([_hd, ..._tl] : list<int>) => false
     ]));
     // K.todo("Should return the head of the parametric list in a Some; None otherwise");
 };
@@ -56,7 +56,7 @@ export const is_empty = (v : list<int>) : bool => {
 export const head = (l:list<int>): option<int> => {
     match(l, list([
         ([]: list<int>) => None(),
-        ([h, ...t]: list<int>) => Some(h)
+        ([h, ..._t]: list<int>) => Some(h)
     ]));
     // K.todo("Should return the head of the parametric list in a Some; None otherwise");
 };

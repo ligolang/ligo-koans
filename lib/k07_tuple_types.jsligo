@@ -7,15 +7,15 @@
 
 type point = [int,int];
 
-export let new_point = (x:int,y:int): point => {
+export const new_point = (x:int,y:int): point => {
     K.todo("Should return the a point");
 };
 
-export let abscissa = (p:point): int => {
+export const abscissa = (p:point): int => {
     K.todo("Should return the first component of the point");
 };
 
-export let ordinate = (p:point): int => {
+export const ordinate = (p:point): int => {
     K.todo("Should return the second component of the point");
 }
 

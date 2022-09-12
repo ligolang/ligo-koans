@@ -51,7 +51,7 @@ export const substract_nat = (n1:nat,n2:nat) : int =>
     n1 - n2;
     // K.todo("Should substract two naturals");
 
-export const substract_tez = (n1:tez,n2:tez) : tez =>
+export const substract_tez = (n1:tez,n2:tez) : option<tez> =>
     n1 - n2;
     // K.todo("Should substract two tez values");
 

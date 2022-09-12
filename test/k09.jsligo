@@ -6,12 +6,12 @@ const case02 = ():unit => Check.assert_equal(Koan.new_tails(), Tails());
 const case03 = ():unit => Check.assert_equal(Koan.flip_coin(Koan.new_heads()), Tails());
 const case04 = ():unit => Check.assert_equal(Koan.flip_coin(Koan.new_tails()), Heads());
 const case05 = ():unit => Check.assert_equal(
-    Koan.play(Play((u:unit):Koan.coin => Heads()), { heads: (0 as nat), tails:(0 as nat)}) 
+    Koan.play(Play((_u:unit):Koan.coin => Heads()), { heads: (0 as nat), tails:(0 as nat)}) 
    , 
     ({ heads: (1 as nat), tails:(0 as nat)})
 );
 const case06 = ():unit => Check.assert_equal(
-    Koan.play(Play((u:unit):Koan.coin => Tails()), { heads: (0 as nat), tails:(0 as nat)}) 
+    Koan.play(Play((_u:unit):Koan.coin => Tails()), { heads: (0 as nat), tails:(0 as nat)}) 
    , 
     ({ heads: (0 as nat), tails:(1 as nat)})
 );

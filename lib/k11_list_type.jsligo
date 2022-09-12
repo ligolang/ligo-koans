@@ -13,7 +13,7 @@
 */
 
 export const no_ints = (): list<int> => list([]);
-export const single_int = (p:int): list<int> => list([1]);
+export const single_int = (p:int): list<int> => list([p]);
 
 /*
     In JsLIGO, the cons operator is infix and noted , .... It is not symmetric: on the left 

@@ -1,2 +1,2 @@
-export let todo : <T>((message:string) => T) = 
+export const todo : <T>((message:string) => T) = 
     message => failwith(message);

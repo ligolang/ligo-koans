@@ -12,14 +12,14 @@
     In JsLIGO, the empty set is denoted by the predefined value Set.empty.
 */
 
-let my_empty_set: set<int> = Set.empty;
+const my_empty_set: set<int> = Set.empty;
 
 /*
     In JsLIGO, you can define a non-empty set using the Set.literal function 
     which takes a list of elements & returns a set.
 */    
 
-let my_set: set<int> = Set.literal(list([3, 2, 2, 1]));
+const my_set: set<int> = Set.literal(list([3, 2, 2, 1]));
 
 /*
     A set can be altered thanks to Set.add, tested using Set.mem.

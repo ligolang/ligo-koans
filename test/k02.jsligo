@@ -8,10 +8,11 @@ const case04 = ():unit => Check.assert_equal(Koan.add_tez(5 as tez, 3 as tez), 8
 const case05 = ():unit => Check.assert_equal(Koan.substract_int(5, 3), 2);
 const case06 = ():unit => Check.assert_equal(Koan.substract_int_and_nat(5, 3 as nat), 2);
 const case07 = ():unit => Check.assert_equal(Koan.substract_nat(5 as nat, 3 as nat), 2);
-const case08 = ():unit => Check.assert_equal(Koan.substract_tez(5 as tez, 3 as tez), 2 as tez);
-const case09 = ():unit => Check.assert_equal(Koan.int_from_nat(5 as nat), 5);
-const case10 = ():unit => Check.assert_equal(Koan.nat_from_int(5), 5 as nat);
+const case08 = ():unit => Check.assert_equal(Koan.substract_tez(5 as tez, 3 as tez), Some(2 as tez));
+const case09 = ():unit => Check.assert_equal(Koan.substract_tez(3 as tez, 5 as tez), None() as option<tez>);
+const case10 = ():unit => Check.assert_equal(Koan.int_from_nat(5 as nat), 5);
+const case11 = ():unit => Check.assert_equal(Koan.nat_from_int(5), 5 as nat);
 
 const test = Check.cases(list([ 
-    case01, case02, case03, case04, case05, case06, case07, case08, case09, case10
+    case01, case02, case03, case04, case05, case06, case07, case08, case09, case10, case11
 ]));

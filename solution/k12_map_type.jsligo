@@ -60,7 +60,7 @@ export const update = (m : map<int,string>, k:int, v:string) : [option<string>,m
 
 export const map = (f:((k:int,v:string) => string), m: map<int,string>): map<int,string> => {
     Map.map(f, m);
-    // K.todo("Should apply the function on the value in a Some and return an option with the new value, Return None otherwise");
+    // K.todo("Should apply the function on all pairs of  key value and return the transformed map ");
 };
   
 /*

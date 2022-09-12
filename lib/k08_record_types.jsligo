@@ -30,7 +30,7 @@ const balance : tez = (account()).balance;
   Reference; https://ligolang.org/docs/language-basics/maps-records#functional-updates
 */
 
-export let modify_account = (account: account_data) : account_data => {
+export contents modify_account = (account: account_data) : account_data => {
   K.todo("Should return an account data with 5 transactions");
 }
 

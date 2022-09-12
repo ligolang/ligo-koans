@@ -6,8 +6,8 @@ const case01_ = (): bool => {
     const contract = Test.to_contract(taddr);
 
     match(Test.transfer_to_contract(contract, 1, 1 as mutez), {
-        Success: g => true,
-        Fail: e => false,
+        Success: _g => true,
+        Fail: _e => false,
     });    
 };
 
@@ -16,11 +16,11 @@ const case02_ = (): bool => {
     const contract = Test.to_contract(taddr);
     
     match(Test.transfer_to_contract(contract, -1, 1 as mutez), {
-        Success: g => false,
+        Success: _g => false,
         Fail: e => match(e, {
-            Rejected: p => true,
-            Balance_too_low: r => false,
-            Other: r => false
+            Rejected: _p => true,
+            Balance_too_low: _r => false,
+            Other: _r => false
         }),
     });    
 };

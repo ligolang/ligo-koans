@@ -7,20 +7,11 @@
 
 type point = [int,int];
 
-export let new_point = (x:int,y:int): point => {
-    [x,y];
-    // K.todo("Should return the a point");
-};
+export const new_point = (x:int,y:int): point => [x,y];
 
-export let abscissa = (p:point): int => {
-    p[0];
-    // K.todo("Should return the first component of the point");
-};
+const abscissa = (p:point): int => p[0];
 
-export let ordinate = (p:point): int => {
-    p[1];
-    // K.todo("Should return the second component of the point");
-}
+const ordinate = (p:point): int => p[1];
 
 /*
     Reference: https://ligolang.org/docs/language-basics/sets-lists-tuples#tuples

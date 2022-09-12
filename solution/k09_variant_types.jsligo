@@ -93,8 +93,8 @@ type point = | ["Coordinate", coordinate] | ["Polar", polar];
 
 export const is_coordinate = (p:point): bool => {
     match(p,{
-        Coordinate: _c => true, // p can be used as usual since it's a record,
-        Polar: _p => false, // p can be used as usual since it's a record,
+        Coordinate : _c => true, // p can be used as usual since it's a record,
+        Polar : _p => false, // p can be used as usual since it's a record,
     });
 };
 
