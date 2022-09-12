@@ -1,4 +1,4 @@
-FROM ligolang/ligo:0.42.0 as ligo
+FROM ligolang/ligo:stable as ligo
 
 FROM gitpod/workspace-full:latest
 
