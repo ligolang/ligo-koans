@@ -10,7 +10,7 @@ type account_data = {
   transactions: nat
 };
 
-export let account = () : account_data => {
+export const account = () : account_data => {
   K.todo("Should return an account data with a balance of 5 tez and 3 transactions");
 };
 
@@ -30,7 +30,7 @@ const balance : tez = (account()).balance;
   Reference; https://ligolang.org/docs/language-basics/maps-records#functional-updates
 */
 
-export contents modify_account = (account: account_data) : account_data => {
+export const modify_account = (account: account_data) : account_data => {
   K.todo("Should return an account data with 5 transactions");
 }
 
