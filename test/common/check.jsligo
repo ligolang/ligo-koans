@@ -8,8 +8,8 @@ const to_red = (s:string) : string => red + s + reset;
 
 type error<a> = | ["ERROR", {received:a} ];
 
-const equal : <T>((a:T, b:T) => bool) = p => {
-    Bytes.pack(p[0]) == Bytes.pack(p[1]);
+const equal = <T>(a:T, b:T): bool => {
+    return Bytes.pack(a) == Bytes.pack(b);
 };
 
 const status = (b:bool) : string => {
@@ -20,13 +20,13 @@ const status = (b:bool) : string => {
     }
 };
 
-const assert_equal : <T>((result:T, expected:T) => unit) = p => {
-    const result = equal(p[0], p[1]);
+const assert_equal = <T>(answer:T, expected:T): unit => {
+    const result = equal(answer, expected);
 
-    Test.println(status(result) +  " expected: " + Test.to_string(p[1]));
+    Test.println(status(result) +  " expected: " + Test.to_string(expected));
 
     if (result == false) {
-        Test.println("          received: " + Test.to_string(p[0]));
+        Test.println("          received: " + Test.to_string(answer));
     };
 };
 

@@ -12,17 +12,17 @@ const b: bool = false;
 */
 
 const compare_string = (s1:string,s2:string): bool => {
-    (s1 == s2);
+    return (s1 == s2);
     // K.todo("Should compare two strings");
 };
     
 const boolean_and = (b1:bool,b2:bool): bool => {
-    (b1 && b2);
+    return (b1 && b2);
     // K.todo("Should return the boolean and of b1, b2 ");
 };
      
 const boolean_or = (b1:bool,b2:bool): bool => {
-    (b1 || b2);
+    return (b1 || b2);
     // K.todo("Should return the boolean or of b1, b2");
 };
 

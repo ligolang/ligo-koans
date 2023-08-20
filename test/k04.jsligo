@@ -1,7 +1,7 @@
 #import "common/check.jsligo" "Check"
 #import "../lib/k04_bytes_type.jsligo" "Koan"
 
-const case01 = ():unit => Check.assert_equal(Koan.concat([0x1234, 0x5678]), 0x12345678);
+const case01 = ():unit => Check.assert_equal(Koan.concat(0x1234, 0x5678), 0x12345678);
 const case02 = ():unit => Check.assert_equal(Koan.first(0x1224), 0x12);
 const case03 = ():unit => Check.assert_equal(Koan.length(0x123456), 3 as nat);
 

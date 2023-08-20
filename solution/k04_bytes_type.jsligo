@@ -1,7 +1,7 @@
 #import "common/todo.jsligo" "K"
 
 /*
-    Bytes can be concatenated using the + operator.
+    Bytes can be concatenated using a built-in function Bytes.concat.
 */
 
 export const concat = (n1:bytes,n2:bytes) : bytes =>
